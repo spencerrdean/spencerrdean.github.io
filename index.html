@@ -1,1238 +1,645 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link href="./img/favicon.png" rel="shortcut icon"/>
         <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
-        <link href="./css/about.css" rel="stylesheet" type="text/css"/>
-        <meta content="AnimaApp.com - Design to code, Automated." name="author">
-        </meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Spencer Dean - Technical Writer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Technical writer, data scientist, and journalist based in the San Francisco Bay Area. Specializing in data analysis and writing.">
+    <meta name="keywords" content="technical writer, data scientist, journalist, data analysis, writing, San Francisco">
+    <meta name="author" content="Spencer Dean">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Spencer Dean - Technical Writer">
+    <meta property="og:description" content="Technical writer, data scientist, and journalist based in the San Francisco Bay Area.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spencerrdean.github.io">
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+    <!-- Stylesheets -->
+    <link href="./css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
     </head>
-    <body style="margin: 0;
- background: rgba(255, 255, 255, 1.0);">
-        <input id="anPageName" name="page" type="hidden" value="about"/>
-        <div class="anima-container-center-horizontal">
-            <div class="about anima-screen ">
-                <div class="rectangle-21-9291545f-7c93-49a9-b4c0-d5dc0bb269b0-xF7yo7">
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">SD</a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <!--<a href="./blog/">Blog</a> -->
+                    <a href="#contact">Contact</a>
                 </div>
-                <div class="rectangle-20-c2118e5e-6183-4b2d-953b-74b58c89a352-D6pl4i">
                 </div>
-                <div class="rectangle-18-6e48532e-21ed-4c42-bfb2-bd0aed86772b-JwKLCE anima-hidden ">
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Spencer Dean</h1>
+                        <p class="hero-subtitle">Data-Driven Technical Writer</p>
+                        <p class="hero-description">
+                            I translate complex information into clear, engaging content.
+                        </p>
                 </div>
-                <div class="rectangle-17-8cd53aeb-6aa0-4100-a13a-5ae1b34ce95a-Ee8n2q anima-hidden ">
+                    <div class="hero-visualization">
+                        <div id="dither-container"></div>
                 </div>
-                <img anima-src="./img/path-7@1x.png" class="path-7-c99a62c6-dced-4d55-9742-9a8613359f5c-O0lCnx" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <img anima-show-on-scroll="" anima-src="./img/portfolio-cover-1@1x.png" class="portfolio-cover-1-c2ad808f-9424-4d4a-b6da-6a38bff929e9-KzSLO2 bp1-anima-animate-enter" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <img anima-src="./img/path-6@1x.png" class="path-6-511b346d-0c8b-46ce-b169-32b35b7f279e-morVBb" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <img anima-src="./img/polygon-2@1x.png" class="polygon-2-430a725e-e8a4-410f-bdb6-b2dcae879205-k3Xqxf" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <img anima-show-on-scroll="" anima-src="./img/polygon-3@1x.png" class="polygon-3-9ae98afa-4bc0-4d60-8dab-498ff709d13a-f84XWw bp1-anima-animate-enter1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <img anima-src="./img/polygon-5-1@1x.png" class="polygon-5-5fec409a-9d92-44eb-bce2-b87d0bb07867-8klWKw" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <img anima-src="./img/path-5@1x.png" class="path-5-6090fefa-780c-418d-be16-56d8621419ac-XaB8b6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <div class="about-me-a2e380aa-b22d-444f-aca9-c747e0eff3f1-0B3Hiy font-class-1">
-                    about me
                 </div>
-                <div class="hi-i-m-a-student-at-wesleyan-university-where-i-study-psychology-and-data-science-most-of-my-personal-and-academic-projects-are-situated-at-the-fruitful-intersection-of-data-analysis-and-writing-a6888a8d-2cb7-4f8a-9e9d-8b020e4148c8-aEfxPD font-class-1">
-                    Hi! I`m a student at Wesleyan University, where I study <br />Psychology and Data Science. Most of my personal and academic projects are situated at the fruitful intersection of data analysis and writing.<br /><br />
                 </div>
-                <img anima-src="./img/path-8@1x.png" class="path-8-361dada1-f422-4713-8a3e-46b90997f441-q2LLr5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <div class="group-2-b73b8d88-95bd-407b-ae6b-dc78856b3404-cD7hLD">
-                    <img anima-src="./img/path-9@1x.png" class="path-9-becd9dfe-e2c3-4ba8-9fc1-344cb3a43a14-GScrxV" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/path-10@1x.png" class="path-10-e695cf67-7b3a-470e-91cf-cb9713de8328-8uPrCK" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/path-11@1x.png" class="path-11-d50ace0f-76ef-4067-a63a-603df6e3e5cb-Echl03" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="about-column">
+                        <p class="about-text">
+                            To paraphrase <a href="https://www.bu.edu/clarion/guides/vonnegut-1980.pdf">Kurt Vonnegut</a>, technical writing and journalism reveal uniquely little about the writer. So, here's a bit about me:
+                        </p>
+                        <p class="about-text">As a technical writer, I work with engineering teams to document APIs and other tools for developers. I write and review conceptual overviews, how-to guides, release notes, and reference documents. To aid comprehension, I incorporate code samples, technical diagrams, and videos.</p>
                 </div>
-                <div class="group-6-137055c0-228f-40c6-a263-812e81c3dd06-wtJNIH anima-smart-layers-pointers ">
-                    <div class="spencer-dean-d9072265-2163-4bcc-a7b3-957c3067e4cd-8Cjr3U font-class-1 bp1-anima-animate-enter2 anima-smart-layers-pointers ">
-                        Spencer Dean
+                    <div class="about-column">
+                        <p class="about-text">With experience in data science and journalism, I bring an analytical approach and knack for plain language to my work. I also have an array of personal and academic <a href="#projects">projects</a> that are situated at the fruitful intersection of data analysis and writing.</p>
+                        <p class="about-text">I live in San Francisco and enjoy bodysurfing, fishing, and playing bossa nova guitar.</p>
                     </div>
-                    <div class="data-scientist-and-journalist-based-in-the-san-francisco-bay-area-e073f7ba-fb99-46e6-adec-a0d45f53e830-I9nyXQ font-class-1 bp1-anima-animate-enter3 anima-smart-layers-pointers ">
-                        data scientist and journalist <br />based in the san francisco bay area
-                    </div>
-                </div>
-                <div class="group-7-ced0b990-16cd-4c1b-8345-6a443a0e23dc-E6xN72 anima-smart-layers-pointers ">
-                    <img anima-show-on-scroll="" anima-src="./img/line-1@1x.png" class="line-1-9cd46c2d-4b6c-4188-b5ef-a71b12d45a6a-O2wq1H bp1-anima-animate-enter4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/img-0645@1x.png" class="img-0645-8d39b46d-bb8a-4d95-8a33-2e508e409ba6-rr8Gix" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-show-on-scroll="" anima-src="./img/line-5@1x.png" class="line-5-4d839e67-8f4b-433c-9999-50d23dd87c98-HF7r5L bp1-anima-animate-enter5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/ellipse-9@1x.png" class="ellipse-9-3aae0346-d60c-48ee-9102-410e2ed5885e-sXDH0E" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/line-4@1x.png" class="line-4-08e20f0e-0b09-4d0a-82f1-f07ff23410c3-HTzxzb" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <div class="group-4-b79e13c4-e8cf-4b58-8a32-a2abed088ff5-ohjBUU">
-                        <div class="rectangle-14-6bd7ef43-beff-4ba4-a053-a7ffc7ccfe37-gMRx4U">
-                        </div>
-                        <div class="rectangle-15-d3b68f31-fe3a-4f58-a02f-80ea2f94c365-MgxKPi">
-                        </div>
-                        <div class="rectangle-16-68a79e08-ecc8-4379-afad-895f028e3d8e-py2gPQ">
-                        </div>
                     </div>
                 </div>
-                <div class="group-8-01600dc4-bc5f-44e9-ae32-7ef2fb221207-yQ0Sjn anima-smart-layers-pointers ">
-                    <div anima-show-on-scroll="" class="group-1-b184606f-c0b8-44e0-b4ee-5344e962cb7f-KBWRKc bp1-anima-animate-enter6 anima-smart-layers-pointers ">
-                        <img anima-src="./img/line-2@1x.png" class="line-2-2399bc05-dcd5-42ba-80b8-62de71532aec-MK0hKb" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-4@1x.png" class="polygon-4-bb3c9caf-43b2-458c-8619-2f927afccea0-txDynL" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    </div>
-                    <div anima-show-on-scroll="" class="s-c-r-o-l-l-f7013991-f18b-436a-8786-f9bd686b2554-iuPaoW font-class-1 bp1-anima-animate-enter7 anima-smart-layers-pointers ">
-                        S<br />C<br />R<br />O<br />L<br />L<br />
-                    </div>
-                </div>
-                <div class="rectangle-18-3f07efdf-db78-4959-af94-1860146e87f2-SxhB0Y anima-hidden ">
-                </div>
-                <div class="experience-28f6cbc9-6966-4d60-bc13-4ffc34f4fb47-wo5jir font-class-1">
-                    experience
-                </div>
-                <div class="technical-writer-intern-summer-2019-2020-7a097ef3-ddff-4f3b-b0f9-c86198a032e4-49XjCy font-class-1">
-                    Technical Writer Intern, summer 2019 &amp; 2020
-                </div>
-                <a href="https://mediaproject.wesleyan.edu/" target="_blank">
-                    <div class="wesleyan-media-project-7051d517-454c-4863-8d49-6f89c689e14d-tQkcNP font-class-1 anima-smart-layers-pointers ">
-                        Wesleyan Media Project
-                    </div>
-                </a>
-                <div class="computational-research-assistant-january-2019-present-0c06ea4f-5880-4964-8e86-5955f755066a-5LF3tt font-class-1">
-                    Computational Research Assistant, January 2019 — Present
-                </div>
-                <a href="http://wesleyanargus.com/user/srdean/" target="_blank">
-                    <div class="wesleyan-argus-bf5152d0-5f40-47c4-96ab-c683418f859c-YQPnYn font-class-1 anima-smart-layers-pointers ">
-                        Wesleyan Argus
-                    </div>
-                </a>
-                <div class="staff-writer-and-copy-editor-august-2018-present-b87ed1f3-f173-4e64-9aec-b00f47d002f0-EO5pde font-class-1">
-                    Staff Writer and Copy Editor, August 2018 — Present
-                </div>
-                <a href="https://medium.com/@spencerdean" target="_blank">
-                    <div class="towards-data-science-d7ba7651-b670-468e-a8d0-a04331983117-J7vMxn font-class-1 anima-smart-layers-pointers ">
-                        Towards Data Science
-                    </div>
-                </a>
-                <div class="contributing-writer-october-2018-present-e4039769-1f16-4fc0-8969-bd30d433552c-V7jR18 font-class-1">
-                    Contributing Writer, October 2018 — Present
-                </div>
-                <div class="rectangle-22-e1cf4135-0337-4af5-a44e-c5a03ec7e597-9CYNpr">
-                </div>
-                <div class="projects-3584eea1-d4c7-40bb-a1d1-f53ff8ae440a-Ql9fxZ font-class-1">
-                    projects
-                </div>
-                <a href="https://twitter.com/spencer__dean" target="_blank">
-                    <div class="twitter-b7021869-679d-477d-9d5a-36af8695c01c-JXiNxa anima-smart-layers-pointers ">
-                        <img anima-src="./img/twitter@1x.png" class="twitter-193f4413-b080-4bdb-ab66-08827cd06faa-YdObvz" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    </div>
-                </a>
-                <a href="https://medium.com/@spencerdean" target="_blank">
-                    <img anima-src="./img/medium-45-432455@1x.png" class="medium-45-432455-f6adddd0-3a59-4fef-8bad-37e9391e609e-n5Zrcm anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                </a>
-                <a href="mailto:sdean136@gmail.com" target="_blank">
-                    <img anima-src="./img/img-504370@1x.png" class="img-504370-629002a8-2d44-43ba-a389-339137e7d555-Z37W8C anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                </a>
-                <a href="https://github.com/spencerrdean" target="_blank">
-                    <img anima-src="./img/img-4266@1x.png" class="img-4266-29afe2f5-6edb-4dfa-9d73-672485ffe8ef-wzYrck anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                </a>
-                <div class="c-2020-spencer-dean-c9a07433-ec51-48dd-a358-f9d34336b5f0-tB4gvu font-class-2">
-                    © 2020 Spencer Dean
-                </div>
-                <a href="https://www.linkedin.com/in/spencer-dean-786693156/" target="_blank">
-                    <img anima-src="./img/iconfinder-11-linkedin-104493@1x.png" class="iconfinder-11-linkedin-104493-e92f47e7-e9b4-423d-adf1-841efea7c2b4-exWRNM anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                </a>
-                <a href="https://towardsdatascience.com/what-stories-do-schools-teach-us-43069c6dc040" target="_blank">
-                    <div class="analysis-of-english-curriculums-39a424de-ae64-4f20-aace-9ce7ecddbd50-Gx2kQu font-class-1 anima-smart-layers-pointers ">
-                        Analysis of English Curriculums
-                    </div>
-                </a>
-                <div class="article-with-accompanying-data-visualizations-analyzing-the-representation-of-female-authors-in-common-core-english-curriculums-71297e56-e34e-468e-beba-354d6b029861-cbhWp9 font-class-1">
-                    Article with accompanying data visualizations analyzing the representation of female authors in Common Core English curriculums
-                </div>
-                <a href="http://deltalab.research.wesleyan.edu/2020/05/21/coronavirus-coverage-minimal-in-presidential-candidate-digital-advertising/" target="_blank">
-                    <div class="coronavirus-coverage-in-political-advertising-1be9b0b6-7506-43b7-b8e7-da930589e8a5-dHFa0u font-class-1 anima-smart-layers-pointers ">
-                        Coronavirus Coverage in Political Advertising
-                    </div>
-                </a>
-                <div class="research-project-tracking-u-s-presidential-candidate-references-to-the-coronavirus-in-facebook-advertisements-4b2240d8-e7e7-4cba-95d9-1297f726d113-eeWpN8 font-class-1">
-                    Research project tracking U.S. presidential candidate references to the coronavirus in Facebook advertisements
-                </div>
-                <a href="https://towardsdatascience.com/the-isolated-den-of-fox-news-f31126e605cd" target="_blank">
-                    <div class="network-analysis-of-online-news-outlets-7d7347c5-bcf7-483c-a334-7f52839820be-UglgyV font-class-1 anima-smart-layers-pointers ">
-                        Network Analysis of Online News Outlets
-                    </div>
-                </a>
-                <div class="article-detailing-my-process-of-visualizing-and-analyzing-citations-between-news-sources-168dfff9-3099-46bd-8851-d4010ce00cc9-acV4Yl font-class-1">
-                    Article detailing my process of visualizing and analyzing citations between news sources
-                </div>
-                <div class="rectangle-23-9c6100de-f2b0-44a0-8e98-e873231e957e-eDFa3j">
-                </div>
-                <div class="skills-797d686a-a3d3-49f9-8f5f-3bb51bf336b9-Ah0z9a font-class-1">
-                    skills
-                </div>
-                <div class="languages-0d76fb40-c641-492f-aa41-2bb0ccb7d8a8-Nqh5Dx font-class-1">
-                    Languages
-                </div>
-                <div class="r-python-sql-d3-js-html-css-5b21de98-7751-4724-ac5a-e43c7170add3-eJwZgQ font-class-1">
-                    R, Python, SQL, D3.js, HTML, CSS
-                </div>
-                <div class="software-other-4bc47ee7-1462-4057-9de6-5a496de20096-BVZBU7 font-class-1">
-                    Software &amp; Other
-                </div>
-                <div class="tableau-salesforce-adobe-xd-cytoscape-c183f5fc-b370-4fe0-a876-f7c40a0f6607-QzwMPn font-class-1">
-                    Tableau, Salesforce, Adobe XD, Cytoscape
-                </div>
-                <div class="group-13-4c02dcd8-4fd2-47a5-886d-5e55ce04e793-wKgwBv anima-flexbox-container">
-                    <div class="group-14-0ebcb808-c28d-476d-9615-b4f06e42e4d9-Cyeuqj">
-                        <img anima-src="./img/path-16@1x.png" class="path-16-4cd51594-a456-4d1c-b6c0-07c8ef0d654a-kutifD" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-17@1x.png" class="path-17-86671d68-d6cd-4b7e-a79e-80c6ac3621d8-1z63cy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-18@1x.png" class="path-18-54fef40d-38fd-4af1-9e37-1c7f03527c35-5OIXY6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-carousel">
+                    <div class="experience-track">
+                        <div class="experience-item active">
+                            <h3 class="experience-title">Senior Technical Writer</h3>
+                            <p class="experience-org">Salesforce</p>
+                            <p class="experience-duration">2021 — Present</p>
+                            <p class="experience-description">Create developer documentation for Salesforce Commerce Cloud.</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <h3 class="experience-title">Computational Research Assistant</h3>
+                            <p class="experience-org">Wesleyan Media Project</p>
+                            <p class="experience-duration">2019 — 2021</p>
+                            <p class=""experience-description">Analyzed political advertisements on digital platforms.</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <h3 class="experience-title">Technical Writer Intern</h3>
+                            <p class="experience-org">Salesforce</p>
+                            <p class="experience-duration">Summer 2019 & 2020</p>
+                            <p class="experience-description">Authored customer emails for technical updates and created an internal wiki.</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <h3 class="experience-title">Staff Writer and Copy Editor</h3>
+                            <p class="experience-org">The Wesleyan Argus</p>
+                            <p class="experience-duration">2018 — 2021</p>
+                            <p class="experience-description">Produced and edited campus newspaper articles for biweekly publication.</p>
                     </div>
                 </div>
-                <a href="https://www.salesforce.com/" target="_blank">
-                    <div class="salesforce-352deee7-7a47-468f-a7d4-c9af5120652e-zJoHIJ font-class-1 anima-smart-layers-pointers ">
-                        Salesforce
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" onclick="moveCarousel(-1)" id="prev-btn">‹</button>
+                        <button class="carousel-btn" onclick="moveCarousel(1)" id="next-btn">›</button>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="anima-container-center-horizontal">
-            <div class="workmedium anima-screen ">
-                <div class="rectangle-18-e582098a-d52f-46f1-baea-77f94af1c5d1-Ox5BKf anima-hidden ">
-                </div>
-                <div class="rectangle-17-13fd0796-f7bc-4bd9-a2c3-6d51a7470a33-L78CFc anima-hidden ">
-                </div>
-                <div class="group-12-a0bd975c-3ce9-4dd8-9a06-c704ac379ab3-7Vs3MA anima-flexbox-container">
-                    <div class="overlap-group1-6KsG4z">
-                        <img anima-show-on-scroll="" anima-src="./img/portfolio-cover-1-1@1x.png" class="portfolio-cover-1-a5df1c35-a44f-418a-968b-dd0dc322eb34-44JgTj bp2-anima-animate-enter anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-6-1@1x.png" class="path-6-f396f588-3050-416a-a272-8543c31a52c8-Kxkrzx" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-2-1@1x.png" class="polygon-2-6b7b594e-9ae8-476c-9b9b-a10b1da16f3a-YPEqU5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-show-on-scroll="" anima-src="./img/polygon-3-1@1x.png" class="polygon-3-bb001323-8f5e-49a9-86cb-5b4e9220d7b0-QbvTIM bp2-anima-animate-enter1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-5-1@1x.png" class="polygon-5-aea6d91b-1fc5-4a26-958b-9aa1ca9b8ca1-YGxaJy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-5-1@1x.png" class="path-5-8a0b4e31-a909-4dc4-8da4-6cd07cfc4e98-TjrQTF" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-6-bc8ae556-df57-4fe4-baad-2dd365cc62be-OXM6YA anima-smart-layers-pointers ">
-                            <div class="spencer-dean-ea85c9ed-0f4e-4304-859c-be60d5825785-9aV7NA font-class-1 bp2-anima-animate-enter2 anima-smart-layers-pointers ">
-                                Spencer Dean
-                            </div>
-                            <div class="data-scientist-and-journalist-based-in-the-san-francisco-bay-area-3f1f1a00-82a6-4012-8fa6-39d8bc16aaf1-ek15N6 font-class-1 bp2-anima-animate-enter3 anima-smart-layers-pointers ">
-                                data scientist and journalist <br />based in the san francisco bay area
-                            </div>
-                        </div>
-                        <div class="group-7-5110c3a8-1c54-49ef-b78e-297e70a3acb4-1yBSBN anima-smart-layers-pointers ">
-                            <img anima-show-on-scroll="" anima-src="./img/line-1-1@1x.png" class="line-1-914d9cb9-5c94-49ab-bc08-3f90d2901b2b-gABf71 bp2-anima-animate-enter4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/img-0645-1@1x.png" class="img-0645-dc1bcdbf-e649-4f71-bbd6-cdffdf36f645-mxM6az" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-show-on-scroll="" anima-src="./img/line-5-1@1x.png" class="line-5-4669500a-c97d-4361-bcce-d2a16beb4bfc-6plKSQ bp2-anima-animate-enter5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/ellipse-9-1@1x.png" class="ellipse-9-728a2293-3f73-4426-a1f3-d32f3e2f5cc8-Ro7uIX" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/line-4-1@1x.png" class="line-4-71912515-1dde-4b34-8d59-7992631e9171-kipcox" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <div class="group-4-7085df6c-72a0-4187-9909-be32d2a96d0a-oxxdXp">
-                                <div class="rectangle-14-48ed0d0b-5f8c-4a20-aba3-4e0ac09cd959-UudfOC">
-                                </div>
-                                <div class="rectangle-15-64fed510-7c91-4578-a7a2-c62af1d6ec52-y61Bdl">
-                                </div>
-                                <div class="rectangle-16-1a13eed1-606e-4751-990e-ed3b61da6ebb-og16xZ">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group-8-4ff6e820-7e32-449a-97bc-91da180f692a-ZZZ0TC anima-smart-layers-pointers ">
-                            <div anima-show-on-scroll="" class="group-1-6a24710c-5338-40ba-b9e3-970e9c3e7a26-d2AmXH bp2-anima-animate-enter6 anima-smart-layers-pointers ">
-                                <img anima-src="./img/line-2-1@1x.png" class="line-2-5c93fdde-c2da-42f1-ae45-1aefb21e066a-BVgdW9" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/polygon-4-1@1x.png" class="polygon-4-aba3a427-b714-454d-8257-123f0428a5a9-jALKue" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                            <div anima-show-on-scroll="" class="s-c-r-o-l-l-3984ead5-ec1b-4767-9c9a-4eee5f756b2c-EnMxmB font-class-1 bp2-anima-animate-enter7 anima-smart-layers-pointers ">
-                                S<br />C<br />R<br />O<br />L<br />L<br />
-                            </div>
-                        </div>
+                    
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator active" onclick="goToSlide(0)"></div>
+                        <div class="carousel-indicator" onclick="goToSlide(1)"></div>
+                        <div class="carousel-indicator" onclick="goToSlide(2)"></div>
+                        <div class="carousel-indicator" onclick="goToSlide(3)"></div>
                     </div>
-                    <div class="overlap-group-fWbX5x">
-                        <div class="rectangle-21-42ec1e67-fb3a-43fe-a2ba-d0d71f74461e-xH3k0i">
-                        </div>
-                        <div class="auto-flex-Hx5bxf anima-flexbox-container">
-                            <div class="rectangle-20-7bd4d18f-ee28-4c41-af2a-2e1901e00a88-lOigxI">
-                            </div>
-                            <div class="about-me-587e5c04-4f3e-4c17-8481-26dd14646202-8ILgr2 font-class-1">
-                                about me
-                            </div>
-                        </div>
-                        <img anima-src="./img/path-7-1@1x.png" class="path-7-82cbee22-0d73-486f-b70e-d61cd4c289db-wvPV4y" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="hi-i-m-a-student-at-wesleyan-university-where-i-study-psychology-and-data-science-most-of-my-personal-and-academic-projects-are-situated-at-the-fruitful-intersection-of-data-analysis-and-writing-440402ee-b8a6-4e9c-9b11-a4a37a59a1d7-xVauXZ font-class-1">
-                            Hi! I`m a student at Wesleyan University, where I study <br />Psychology and Data Science. Most of my personal and academic projects are situated at the fruitful intersection of data analysis and writing.<br /><br />
-                        </div>
-                        <img anima-src="./img/path-8-1@1x.png" class="path-8-2763c63f-1561-4d61-ad8b-c306ab1e9ecf-cWixxt" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-2-ea0a935c-11e7-4d86-a32e-b61f59ad44ed-rjQVT8">
-                            <img anima-src="./img/path-9-1@1x.png" class="path-9-5c6e1ce0-1af7-4fc5-956c-846aec7c1d1a-QcugxR" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-10-1@1x.png" class="path-10-e0b58544-7c1e-434d-9cf6-b5dc4be3a3cf-xMcz5I" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-11-1@1x.png" class="path-11-984bdb0c-2679-4228-abbe-019dc6c2e37c-4l46MU" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </div>
-                        <div class="experience-4c4457e4-d207-47a3-bfe6-eb788740d35b-yzcrU0 font-class-1">
-                            experience
-                        </div>
-                        <div class="technical-writer-intern-summer-2019-2020-a84c3f2d-2994-4903-aa7b-c8694650a741-xOODlE font-class-1">
-                            Technical Writer Intern, summer 2019 &amp; 2020
-                        </div>
-                        <a href="https://mediaproject.wesleyan.edu/" target="_blank">
-                            <div class="wesleyan-media-project-5a5e31ed-bfe8-4385-94f9-2592ca99c097-axqXTK font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Media Project
-                            </div>
-                        </a>
-                        <div class="computational-research-assistant-january-2019-present-9cd3275c-f0c9-4097-a231-462c956c7943-Pek6fZ font-class-1">
-                            Computational Research Assistant, January 2019 — Present
-                        </div>
-                        <a href="http://wesleyanargus.com/user/srdean/" target="_blank">
-                            <div class="wesleyan-argus-43789662-5d7a-45b0-8a7f-30f4aee9edd8-pwbxrx font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Argus
-                            </div>
-                        </a>
-                        <div class="staff-writer-and-copy-editor-august-2018-present-444b0d69-e1cf-479d-b46b-640db0466ed8-yumOcb font-class-1">
-                            Staff Writer and Copy Editor, August 2018 — Present
-                        </div>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <div class="towards-data-science-d6a0ef0e-fe90-4c97-870f-1e22e9c05494-Vh9yR3 font-class-1 anima-smart-layers-pointers ">
-                                Towards Data Science
-                            </div>
-                        </a>
-                        <div class="contributing-writer-october-2018-present-43fb121a-b0cb-49e4-b79f-222d141e76cd-mwY3w7 font-class-1">
-                            Contributing Writer, October 2018 — Present
-                        </div>
-                        <div class="rectangle-22-7962d76b-b311-45ef-ba8a-3b0655b01858-oxK62P">
-                        </div>
-                        <div class="projects-954b8427-b384-4749-9b31-60ba3b7b919e-q9fcPo font-class-1">
-                            projects
-                        </div>
-                        <a href="https://twitter.com/spencer__dean" target="_blank">
-                            <div class="twitter-daf4d311-3373-40d5-9923-2d20235bca54-StZQn9 anima-smart-layers-pointers ">
-                                <img anima-src="./img/twitter-1@1x.png" class="twitter-e53cd2ef-4684-4b95-a95c-40c1946789c8-w8JSZY" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </a>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <img anima-src="./img/medium-45-432455-1@1x.png" class="medium-45-432455-eec61ac7-b3fa-4451-904a-4c97ca189ab9-eS1OzR anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="mailto:sdean136@gmail.com" target="_blank">
-                            <img anima-src="./img/img-504370-1@1x.png" class="img-504370-a9dbd380-a934-43b1-9a4e-fe90b068b2b2-uRPWsT anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://github.com/spencerrdean" target="_blank">
-                            <img anima-src="./img/img-4266-1@1x.png" class="img-4266-3fcb1dec-242d-4bd1-9ded-76dd77ae0142-Pd40dF anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <div class="c-2020-spencer-dean-b0e2a531-c7c6-4325-912a-1ff296a8742a-hLU7TN font-class-2">
-                            © 2020 Spencer Dean
-                        </div>
-                        <a href="https://www.linkedin.com/in/spencer-dean-786693156/" target="_blank">
-                            <img anima-src="./img/iconfinder-11-linkedin-104493-1@1x.png" class="iconfinder-11-linkedin-104493-5fb265c9-3fa4-4b83-bb84-f294814fd589-rEaxfR anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://towardsdatascience.com/what-stories-do-schools-teach-us-43069c6dc040" target="_blank">
-                            <div class="analysis-of-english-curriculums-6219c26c-6b14-403e-a2d2-3eee5b15f176-sN2PzP font-class-1 anima-smart-layers-pointers ">
-                                Analysis of English Curriculums
-                            </div>
-                        </a>
-                        <div class="article-with-accompanying-data-visualizations-analyzing-the-representation-of-female-authors-in-common-core-english-curriculums-62e7e9aa-c0d3-4806-8dc9-43459efe6296-c0nrGb font-class-1">
-                            Article with accompanying data visualizations analyzing the representation of female authors in Common Core English curriculums
-                        </div>
+                </div>
+                </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                
+                <!-- Technical Writing -->
+                <div class="project-category">
+                    <h3 class="project-category-title" onclick="toggleCategory(this)">
+                        ⿻ Technical Writing
+                        <span class="toggle-icon">▼</span>
+                    </h3>
+                    <div class="projects-grid">
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/place-order.png" alt="Technical diagram for developer doc">
+                </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://developer.salesforce.com/docs/commerce/salesforce-commerce/guide/b2b-d2c-comm-streamlined-place-order.html" target="_blank">
+                                        Streamlined Place Order
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    API feature documentation for Salesforce Commerce Cloud developers. Includes technical diagrams, code samples, and detailed description.
+                                </p>
+                </div>
+                        </article>
+                        
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/migration.png" alt="Migration guide landing page">
+                    </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://developer.salesforce.com/docs/commerce/lwr-migration/overview" target="_blank">
+                                        B2B Commerce Aura to LWR Migration Guide
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Product migration guide for Salesforce Commerce Cloud. Includes step-by-step instructions and opinionated guidance.
+                                </p>
+                </div>
+                        </article>
+                        
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/algo_transparency.png" alt="Algorithmic Transparency">
+                    </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://medium.com/data-science-collective/algorithmic-transparency-f05e290795e8" target="_blank">
+                                        Algorithmic Transparency
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    In-depth overview of algorithmic transparency and AI ethics. Published in Medium's Data Science Collective.
+                                </p>
+                </div>
+                        </article>
+                </div>
+                </div>
+
+                <!-- Research -->
+                <div class="project-category">
+                    <h3 class="project-category-title" onclick="toggleCategory(this)">
+                        𓊍 Research
+                        <span class="toggle-icon">▼</span>
+                    </h3>
+                    <div class="projects-grid">
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/election_analysis.jpg" alt="Election Analysis">
+                    </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="
+                                    https://www.electionanalysis.ws/us/president2020/section-5-social-media/a-banner-year-for-advertising-and-a-look-at-differences-across-platforms/" target="_blank">
+                                        2020 Presidential Election Advertising Analysis
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Contribution to U.S. election analysis published by the Centre for Comparative Politics and Media Research. 
+                                </p>
+                </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/microtargeting.png" alt="Microtargeting map">
+                    </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://deltalab.research.wesleyan.edu/2020/10/28/presidential-advertising-on-snapchat/" target="_blank">
+                                        Microtargeting in Presidential Campaign Ads
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Computational research project revealing targeted advertising methodologies used by 2020 U.S. presidential candidates on Snapchat. Published in the Wesleyan Media Project blog.
+                                </p>
+                </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/covid.png" alt="Coronavirus coverage chart">
+                    </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
                         <a href="http://deltalab.research.wesleyan.edu/2020/05/21/coronavirus-coverage-minimal-in-presidential-candidate-digital-advertising/" target="_blank">
-                            <div class="coronavirus-coverage-in-political-advertising-6ef2c3ad-7675-4663-a94e-764601ce64dc-FRoHU2 font-class-1 anima-smart-layers-pointers ">
                                 Coronavirus Coverage in Political Advertising
-                            </div>
-                        </a>
-                        <div class="research-project-tracking-u-s-presidential-candidate-references-to-the-coronavirus-in-facebook-advertisements-6fb68427-6c55-4031-a453-04c27aaa399b-kLq9NU font-class-1">
-                            Research project tracking U.S. presidential candidate references to the coronavirus in Facebook advertisements
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Collaborative research project tracking U.S. presidential candidate references to COVID-19 in Facebook advertisements. Published in the Wesleyan Media Project blog.
+                                </p>
                         </div>
-                        <a href="https://towardsdatascience.com/the-isolated-den-of-fox-news-f31126e605cd" target="_blank">
-                            <div class="network-analysis-of-online-news-outlets-e0e0a24c-1404-4a44-b015-8b56a97e0b85-IfLGv2 font-class-1 anima-smart-layers-pointers ">
+                        </article>
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <span>📑</span>
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://clippingsme-assets-1.s3.amazonaws.com/cuttingpdfs/1522521/28dc757ef846325ff426fdf46af6d16e.pdf?" target="_blank">
+                                        Assessment of Food Security
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Report on food security for families with children in Middletown, Connecticut. Prepared for the Middlesex Coalition for Children.
+                                </p>
+                        </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/news-network.jpg" alt="Network of news source citations">
+                        </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://medium.com/data-science/the-isolated-den-of-fox-news-f31126e605cd" target="_blank">
                                 Network Analysis of Online News Outlets
-                            </div>
-                        </a>
-                        <div class="article-detailing-my-process-of-visualizing-and-analyzing-citations-between-news-sources-7f35e8d3-3acc-44f4-9a4e-b872c2accbd0-AFWbkw font-class-1">
-                            Article detailing my process of visualizing and analyzing citations between news sources
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Article detailing my process of visualizing and analyzing citations between news sources. Published in Medium's Towards Data Science.
+                                </p>
                         </div>
-                        <div class="rectangle-23-4098ad9f-d0e1-4f36-a848-c77a0a4b46cd-YEQoWx">
+                        </article>
                         </div>
-                        <div class="skills-f96bf38c-e668-44f1-a2a2-6c02adb1b431-Ex8axx font-class-1">
-                            skills
                         </div>
-                        <div class="languages-db972cb0-b2cd-4bd6-9b36-62f506a64410-W2YAm0 font-class-1">
-                            Languages
+
+                <!-- Journalism -->
+                <div class="project-category">
+                    <h3 class="project-category-title" onclick="toggleCategory(this)">
+                        ✳ Journalism
+                        <span class="toggle-icon">▼</span>
+                    </h3>
+                    <div class="projects-grid">
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/cropped-logo2.png" alt="Argus logo">
                         </div>
-                        <div class="r-python-sql-d3-js-html-css-68d06d00-72ef-433d-b543-8bdd93649446-AX8iWF font-class-1">
-                            R, Python, SQL, D3.js, HTML, CSS
-                        </div>
-                        <div class="software-other-2c40bf05-d0bd-4405-b172-b65eb5abb80c-2F71FP font-class-1">
-                            Software &amp; Other
-                        </div>
-                        <div class="tableau-salesforce-adobe-xd-cytoscape-6b721a49-b85c-40be-aa99-fb51983aca4f-iA9f6N font-class-1">
-                            Tableau, Salesforce, Adobe XD, Cytoscape
-                        </div>
-                        <a href="https://www.salesforce.com/" target="_blank">
-                            <div class="salesforce-c7d92bd9-16a2-40c2-a6ab-aaf2e86c0c50-SFAS5L font-class-1 anima-smart-layers-pointers ">
-                                Salesforce
-                            </div>
-                        </a>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://wesleyanargus.com/author/srdean/" target="_blank">
+                                        Wesleyan Argus Articles
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Collection of articles written as Staff Writer and Copy Editor for the Wesleyan University student newspaper
+                                </p>
                     </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/foster-care-grad.jpg" alt="Grad cap graphic">
                 </div>
-                <div class="group-15-670616d7-16aa-40c1-bed4-13efca51dbed-CYDspL anima-flexbox-container">
-                    <div class="group-14-cc969bb1-8cb3-4345-8aad-93efd11f193e-7lQY5u">
-                        <img anima-src="./img/path-16-1@1x.png" class="path-16-8b7bc656-58b2-43a0-ba77-d9192e5a25c0-CDbLRU" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-17-1@1x.png" class="path-17-4fa9dc56-b407-48e0-92e3-72ad30a38987-530Ikh" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-18-1@1x.png" class="path-18-768c72e5-7644-40c5-b417-9c2bafd4239f-7MjleI" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="anima-container-center-horizontal">
-            <div class="worksmall anima-screen ">
-                <div class="rectangle-17-cda788ec-7be5-410b-83d8-467bbb311056-qqxQ8L anima-hidden ">
-                </div>
-                <div class="group-12-2aa6247f-8654-467c-8a79-bb9c1b11186e-V6rASJ anima-flexbox-container">
-                    <div class="overlap-group1-NccrXG">
-                        <img anima-show-on-scroll="" anima-src="./img/portfolio-cover-1-2@1x.png" class="portfolio-cover-1-49671357-db80-484d-8832-358e3c25a8ab-1X8xqM bp3-anima-animate-enter anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-6-2@1x.png" class="path-6-85527d1a-37cc-4715-857c-a624fdc24ce0-DWVaYg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-2-2@1x.png" class="polygon-2-454b944d-9490-45cf-b470-87e632ed0ba7-RxhSMa" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-show-on-scroll="" anima-src="./img/polygon-3-2@1x.png" class="polygon-3-b83ad39a-a42f-497e-85d8-7d80200b99d6-ACQoAp bp3-anima-animate-enter1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-5-2@1x.png" class="polygon-5-032178e0-3fb9-4113-8be1-e69588948a64-rcK2kw" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-5-2@1x.png" class="path-5-73e81e05-e227-4876-a2ac-cb402c0fb633-5uhNmX" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-6-1aac5810-0fd8-4436-8749-3f64928d6b03-YYOAMN anima-smart-layers-pointers ">
-                            <div class="spencer-dean-e40932fd-7c90-43cb-b4f5-08e675cfbf65-rZi3EE font-class-1 bp3-anima-animate-enter2 anima-smart-layers-pointers ">
-                                Spencer Dean
-                            </div>
-                            <div class="data-scientist-and-journalist-based-in-the-san-francisco-bay-area-54beb09d-2ac8-48ca-b750-3df0b6a8ce8d-3phM0p font-class-1 bp3-anima-animate-enter3 anima-smart-layers-pointers ">
-                                data scientist and journalist <br />based in the san francisco bay area
-                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://medium.com/age-of-awareness/graduation-gap-academic-outcomes-for-students-in-foster-care-62333a94777a" target="_blank">
+                                        Academic Outcomes for Students in Foster Care 
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Data-driven reporting about academic outcomes for students in foster care. Published in Medium's Age of Awareness.
+                                </p>
                         </div>
-                        <div class="group-7-d5c09444-b0d4-4ded-9fe4-e1b7eaa53530-Z9uz4v anima-smart-layers-pointers ">
-                            <img anima-show-on-scroll="" anima-src="./img/line-1-2@1x.png" class="line-1-78edfc57-9fad-4a71-b7b8-aaa172ddbf44-wdWvKR bp3-anima-animate-enter4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/img-0645-2@1x.png" class="img-0645-2dd0a889-581e-4c57-b0c9-d8ac093dc970-tTHEBH" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-show-on-scroll="" anima-src="./img/line-5-2@1x.png" class="line-5-69092c95-f85d-454b-b2ee-b84e7df215de-B34ErB bp3-anima-animate-enter5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/ellipse-9-2@1x.png" class="ellipse-9-19536005-8ce4-4ae2-b232-e9f08a241b56-ZMVeqv" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/line-4-2@1x.png" class="line-4-c4dd8b29-84c4-436a-b063-66cac4084e39-QRng4s" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <div class="group-4-6bff0032-3dbf-43fe-bd1b-3617da3c9414-5w5O8P">
-                                <div class="rectangle-14-b0cbe69d-b3a7-4ea2-a552-c2ebadadc027-63Dz7W">
-                                </div>
-                                <div class="rectangle-15-6c034292-1238-48ac-bd38-6ca28fbc26c8-V83USp">
-                                </div>
-                                <div class="rectangle-16-237d2cd9-9ad6-4d32-bc6f-412f36fed3f4-qDwcl8">
-                                </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/books.png" alt="Common core books visualization">
                             </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://medium.com/data-science/what-stories-do-schools-teach-us-43069c6dc040" target="_blank">
+                                        English Curriculums Data Journalism
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Article with accompanying data visualizations analyzing the representation of authors in Common Core English curriculums. Published in Medium's Towards Data Science.
+                                </p>
                         </div>
-                        <div class="group-8-f08844e0-fa0d-4325-93da-7e64fc89c3b2-ktl6fR anima-smart-layers-pointers ">
-                            <div anima-show-on-scroll="" class="group-1-0d3a70fe-7af2-43fc-9481-86a577c82d57-hXjDdb bp3-anima-animate-enter6 anima-smart-layers-pointers ">
-                                <img anima-src="./img/line-2-2@1x.png" class="line-2-ee0c5255-eacf-462c-bd73-823c527fbcba-0z3LhH" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/polygon-4-2@1x.png" class="polygon-4-c481bd7a-454c-42b1-b139-57f9f2183381-7Pa51k" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-cover">
+                                <img src="./img/ct-prisons.png" alt="Graphic for CT prison story">
                             </div>
-                            <div anima-show-on-scroll="" class="s-c-r-o-l-l-a84ef7ec-5edd-4c67-918a-7c14d3acdfd4-xy6d7v font-class-1 bp3-anima-animate-enter7 anima-smart-layers-pointers ">
-                                S<br />C<br />R<br />O<br />L<br />L<br />
-                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title">
+                                    <a href="https://medium.com/@spencerdean/connecticut-prisons-close-doors-as-inmate-levels-drop-e6b6c6c670c1" target="_blank">
+                                        Connecticut Prisons Data Journalism
+                                    </a>
+                                </h4>
+                                <p class="project-description">
+                                    Data-driven reporting about inmate populations in the Connecticut prison system.
+                                </p>
                         </div>
-                    </div>
-                    <div class="overlap-group-gJh8yo">
-                        <div class="rectangle-21-50b71ef2-c1c6-4141-84fd-904746ed26ee-SN2gAY">
+                        </article>
                         </div>
-                        <div class="auto-flex-YhaC3F anima-flexbox-container">
-                            <div class="rectangle-20-edadabf5-388d-49e1-9747-d32b54b5c270-sckaxO">
+                        </div>
                             </div>
-                            <div class="about-me-3bdde4b2-89f8-430e-aeff-7a48ee253af6-4plpG2 font-class-1">
-                                about me
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Languages</h3>
+                        <p class="skills-list">R, Python, SQL, JavaScript, HTML, CSS, XML</p>
+                        </div>
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Software & Other</h3>
+                        <p class="skills-list">Tableau, Google Analytics, GitHub, Perforce, Google Cloud Console, Lucidchart</p>
                             </div>
                         </div>
-                        <img anima-src="./img/path-7-2@1x.png" class="path-7-ece67a5f-9f26-4518-ace9-55c081326f0f-y6PEUK" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="hi-i-m-a-student-at-wesleyan-university-where-i-study-psychology-and-data-science-most-of-my-personal-and-academic-projects-are-situated-at-the-fruitful-intersection-of-data-analysis-and-writing-39e6c804-da30-494a-9096-4ecb7e502a7a-W7APdd font-class-1">
-                            Hi! I`m a student at Wesleyan University, where I study <br />Psychology and Data Science. Most of my personal and academic projects are situated at the fruitful intersection of data analysis and writing.<br /><br />
-                        </div>
-                        <img anima-src="./img/path-8-2@1x.png" class="path-8-136864fc-e087-4855-b65b-b7fff1388f49-x0gX1J" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-2-18d95610-c7de-4232-8c86-94562c0361c1-cXHvF1">
-                            <img anima-src="./img/path-9-2@1x.png" class="path-9-ec56333e-6143-4109-9edc-9933b059b6d0-336Zrg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-10-2@1x.png" class="path-10-664b1eff-b06c-4a59-992d-d7a1e323da19-WCWIfA" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-11-2@1x.png" class="path-11-93485c35-b0d5-42ea-b9ec-7a4b327e5fe6-xLZVGv" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </div>
-                        <div class="experience-23ad6489-8cf0-49f4-af3c-b0405d1c81d3-zb99vN font-class-1">
-                            experience
-                        </div>
-                        <div class="technical-writer-intern-summer-2019-2020-9206e781-7bd1-4b8f-9153-cc7d86a57680-bzsxB3 font-class-1">
-                            Technical Writer Intern, summer 2019 &amp; 2020
-                        </div>
-                        <a href="https://mediaproject.wesleyan.edu/" target="_blank">
-                            <div class="wesleyan-media-project-166b6872-080a-4599-b6f8-ef0b2b285245-v9SsM7 font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Media Project
                             </div>
-                        </a>
-                        <div class="computational-research-assistant-january-2019-present-06cd57f9-41ca-42a6-9f5c-e83766105e8d-AaGaV0 font-class-1">
-                            Computational Research Assistant, January 2019 — Present
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-links">
+                    <a href="mailto:sdean136@gmail.com" class="contact-link">Email</a>
+                    <a href="https://github.com/spencerrdean" target="_blank" class="contact-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/spencer-dean-786693156/" target="_blank" class="contact-link">LinkedIn</a>
+                    <a href="https://medium.com/@spencerdean" target="_blank" class="contact-link">Medium</a>
                         </div>
-                        <a href="http://wesleyanargus.com/user/srdean/" target="_blank">
-                            <div class="wesleyan-argus-a8fac40c-c975-4557-b84a-e5cb1585efb7-bEnBLX font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Argus
                             </div>
-                        </a>
-                        <div class="staff-writer-and-copy-editor-august-2018-present-5774c013-de8c-4cc9-aa8c-3b56a69084a7-vCPp0w font-class-1">
-                            Staff Writer and Copy Editor, August 2018 — Present
-                        </div>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <div class="towards-data-science-9e779a7d-35d0-4a1c-909a-137cd0806816-8mF7KR font-class-1 anima-smart-layers-pointers ">
-                                Towards Data Science
-                            </div>
-                        </a>
-                        <div class="contributing-writer-october-2018-present-1ce44fd0-b5c3-4e9d-bc96-8688f1b0a1d3-ThAK0R font-class-1">
-                            Contributing Writer, October 2018 — Present
-                        </div>
-                        <div class="rectangle-22-493b9c09-6e96-41de-9310-c01b356f066a-a8Mf5p">
-                        </div>
-                        <div class="projects-13eba1de-7387-4cbb-8eaa-ba16a80f0bae-CUVCCO font-class-1">
-                            projects
-                        </div>
-                        <a href="https://twitter.com/spencer__dean" target="_blank">
-                            <div class="twitter-9d8a3915-0ca1-4734-9ceb-a1a3bbfcf8c8-3dXrGU anima-smart-layers-pointers ">
-                                <img anima-src="./img/twitter-2@1x.png" class="twitter-39c88b05-9972-4689-971b-94ab10324a04-BxyWpY" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </a>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <img anima-src="./img/medium-45-432455-2@1x.png" class="medium-45-432455-3ad53e84-e62d-4b8e-afa8-4094241b7182-S2snxH anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="mailto:sdean136@gmail.com" target="_blank">
-                            <img anima-src="./img/img-504370-2@1x.png" class="img-504370-89dfd3f1-9226-48a2-a090-0d8192dfe031-DhDvYS anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://github.com/spencerrdean" target="_blank">
-                            <img anima-src="./img/img-4266-2@1x.png" class="img-4266-e9872ae6-0cb1-4206-aa2d-32167f376fac-I68qIz anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <div class="c-2020-spencer-dean-3004dc70-1d5f-444b-875b-780cf2b6b2b9-MBQi9h font-class-2">
-                            © 2020 Spencer Dean
-                        </div>
-                        <a href="https://www.linkedin.com/in/spencer-dean-786693156/" target="_blank">
-                            <img anima-src="./img/iconfinder-11-linkedin-104493-2@1x.png" class="iconfinder-11-linkedin-104493-58f06780-4b56-4797-a9b0-cee7e7a48917-9ux1HQ anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://towardsdatascience.com/what-stories-do-schools-teach-us-43069c6dc040" target="_blank">
-                            <div class="analysis-of-english-curriculums-50db18bb-7f66-4c24-a816-aec8e86f5ab5-k8QlxM font-class-1 anima-smart-layers-pointers ">
-                                Analysis of English Curriculums
-                            </div>
-                        </a>
-                        <div class="article-with-accompanying-data-visualizations-analyzing-the-representation-of-female-authors-in-common-core-english-curriculums-99c58593-0bc5-466c-b977-c9440d992a88-4aod7l font-class-1">
-                            Article with accompanying data visualizations analyzing the representation of female authors in Common Core English curriculums
-                        </div>
-                        <a href="http://deltalab.research.wesleyan.edu/2020/05/21/coronavirus-coverage-minimal-in-presidential-candidate-digital-advertising/" target="_blank">
-                            <div class="coronavirus-coverage-in-political-advertising-0c62c6f9-000d-4ca7-863f-17a68d9918f8-fKxPDe font-class-1 anima-smart-layers-pointers ">
-                                Coronavirus Coverage in Political Advertising
-                            </div>
-                        </a>
-                        <div class="research-project-tracking-u-s-presidential-candidate-references-to-the-coronavirus-in-facebook-advertisements-488fd4b7-3978-4b70-abf6-1fbdad6db618-53UQlx font-class-1">
-                            Research project tracking U.S. presidential candidate references to the coronavirus in Facebook advertisements
-                        </div>
-                        <a href="https://towardsdatascience.com/the-isolated-den-of-fox-news-f31126e605cd" target="_blank">
-                            <div class="network-analysis-of-online-news-outlets-1d6ae0bb-0154-48c4-b406-028c62149283-vvtepI font-class-1 anima-smart-layers-pointers ">
-                                Network Analysis of Online News Outlets
-                            </div>
-                        </a>
-                        <div class="article-detailing-my-process-of-visualizing-and-analyzing-citations-between-news-sources-2d5167fb-2731-437c-9d78-d7bd6a4d8d5c-76isBo font-class-1">
-                            Article detailing my process of visualizing and analyzing citations between news sources
-                        </div>
-                        <div class="rectangle-23-62f2b2a6-98ce-45d5-9541-29ede68d7fb1-SMYNha">
-                        </div>
-                        <div class="skills-81196089-9aa7-4f08-b12f-375ac19a6979-zflatz font-class-1">
-                            skills
-                        </div>
-                        <div class="languages-ab43e528-7394-46b9-bfa6-b92d41fdac8d-BdLJ9d font-class-1">
-                            Languages
-                        </div>
-                        <div class="r-python-sql-d3-js-html-css-e07359a1-02b9-471b-af61-46b085ed6a6f-W9nUB0 font-class-1">
-                            R, Python, SQL, D3.js, HTML, CSS
-                        </div>
-                        <div class="software-other-21082bd8-f9bd-427c-b77f-fb6320139563-3LMGNx font-class-1">
-                            Software &amp; Other
-                        </div>
-                        <div class="tableau-salesforce-adobe-xd-cytoscape-e4efa9e6-548b-4f94-a6b7-c167ac6fee45-uaVx5h font-class-1">
-                            Tableau, Salesforce, Adobe XD, Cytoscape
-                        </div>
-                        <div class="group-13-002f8aa8-006b-4beb-9c72-be336e435ab4-YQRAxJ anima-flexbox-container">
-                            <div class="group-14-35e5c088-c2ba-4ad3-a993-029e57750628-JAPyLO">
-                                <img anima-src="./img/path-16-2@1x.png" class="path-16-b40ac63c-c5c1-4607-9fb0-71bec0a912b6-tE4VxI" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-17-2@1x.png" class="path-17-1dc51bfc-a5e0-46d4-9c88-1a30f055c142-3GLfFn" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-18-2@1x.png" class="path-18-e8396e67-1c85-47b4-a74d-034bb976c0ba-fceOi3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </div>
-                        <a href="https://www.salesforce.com/" target="_blank">
-                            <div class="salesforce-5020faa0-c704-4abe-8660-056675209a04-hH52Dq font-class-1 anima-smart-layers-pointers ">
-                                Salesforce
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="anima-container-center-horizontal">
-            <div class="worksmallest anima-screen ">
-                <div class="rectangle-17-18430c0d-d45c-4751-897b-d6c0f3e29c14-QwWPUU anima-hidden ">
-                </div>
-                <div class="group-12-b309172b-75ba-46dc-963e-2f9e1e06abc0-ySpPXl anima-flexbox-container">
-                    <div class="overlap-group1-IlPIO9">
-                        <img anima-show-on-scroll="" anima-src="./img/portfolio-cover-1-3@1x.png" class="portfolio-cover-1-66934997-50fc-4e21-b6d7-558653fc483d-Sx2e6t bp4-anima-animate-enter anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-6-3@1x.png" class="path-6-e8ace73c-7eb4-499b-9fb6-6fa5c379a0d3-HYsTeq" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-2-3@1x.png" class="polygon-2-3653b6e2-abb5-4c84-82e6-af941a043a98-KMnwsc" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-show-on-scroll="" anima-src="./img/polygon-3-3@1x.png" class="polygon-3-78a7b6bf-2053-4c8d-8f84-d8f9653dadc5-9raZhv bp4-anima-animate-enter1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-5-2@1x.png" class="polygon-5-5391099e-236d-4b98-be40-bec0a56363cc-aPsTUq" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-5-3@1x.png" class="path-5-c61046c6-4aef-4389-849c-906047d66784-N7OSWy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-6-0b24d718-5480-45da-b454-07582294bd48-DmxYuw anima-smart-layers-pointers ">
-                            <div class="spencer-dean-05cb97b5-964e-47ad-9e03-7cbd5ca0e819-OeAqBA font-class-1 bp4-anima-animate-enter2 anima-smart-layers-pointers ">
-                                Spencer Dean
-                            </div>
-                            <div class="data-scientist-and-journalist-based-in-the-san-francisco-bay-area-5f48a6a4-5953-49d3-bfb1-a11f810f11d4-zTXotm font-class-1 bp4-anima-animate-enter3 anima-smart-layers-pointers ">
-                                data scientist and journalist <br />based in the san francisco bay area
-                            </div>
-                        </div>
-                        <div class="group-7-0c8e2320-c5c7-4562-8de2-542d078b6b18-z8brMH anima-smart-layers-pointers ">
-                            <img anima-show-on-scroll="" anima-src="./img/line-1-3@1x.png" class="line-1-29cce410-19ee-4088-a7a9-782ddb66e5b1-xoWELi bp4-anima-animate-enter4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/img-0645-3@1x.png" class="img-0645-52f5a5df-f530-4ae7-bdeb-47abfba5d85d-vuHq2z" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-show-on-scroll="" anima-src="./img/line-5-3@1x.png" class="line-5-9eb7fb7f-3e44-42e4-9bee-41cccd5e31c1-4orDJb bp4-anima-animate-enter5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/ellipse-9-3@1x.png" class="ellipse-9-b456b868-d0d2-4321-85ee-f9f13ffccef1-ZFAlB1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/line-4-3@1x.png" class="line-4-ddfb0242-3f0b-4c4a-9761-61cf08cecbb2-xRlXZK" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <div class="group-4-056efa30-d552-4171-be2c-719454bd1d16-Ms0xMI">
-                                <div class="rectangle-14-3286b9d4-5028-47d2-b8de-9d66727161fd-MQoNLE">
-                                </div>
-                                <div class="rectangle-15-055508d5-ed70-4702-8a77-63d5c98a58e1-MrlDlM">
-                                </div>
-                                <div class="rectangle-16-8c1794d3-7cb6-4ad0-8ccd-fde7e009da65-ml9avk">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group-8-dab5fe53-ef49-4268-b16f-0e2b76b1ebd8-OkOUUg anima-smart-layers-pointers ">
-                            <div anima-show-on-scroll="" class="group-1-24d312e3-5f9d-4e24-9199-f4adf61eb210-OAXaRi bp4-anima-animate-enter6 anima-smart-layers-pointers ">
-                                <img anima-src="./img/line-2-3@1x.png" class="line-2-12d564f1-4e1c-4538-88fc-139e60b57650-yxg7d4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/polygon-4-3@1x.png" class="polygon-4-54eb9085-8db5-493a-b2a9-779c8c1fb0ca-MGxJjD" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                            <div anima-show-on-scroll="" class="s-c-r-o-l-l-a229b9df-0145-4ec0-a561-f4aa72b4252a-R6uEW0 font-class-1 bp4-anima-animate-enter7 anima-smart-layers-pointers ">
-                                S<br />C<br />R<br />O<br />L<br />L<br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overlap-group-rFeVlx">
-                        <div class="rectangle-21-a9284e8e-806c-40b6-b073-9cfe7539b632-wxwUgA">
-                        </div>
-                        <div class="auto-flex-10mM08 anima-flexbox-container">
-                            <div class="rectangle-20-2e9e4dd7-131c-41a3-b519-40d44c4fd8f3-mnlbpP">
-                            </div>
-                            <div class="about-me-040a391b-563e-4f07-b9b9-72d0d277062a-d3MFWo font-class-1">
-                                about me
-                            </div>
-                        </div>
-                        <img anima-src="./img/path-7-3@1x.png" class="path-7-463778e6-75ca-4ec6-9b1c-97e5e8535277-5NsWzx" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="hi-i-m-a-student-at-wesleyan-university-where-i-study-psychology-and-data-science-most-of-my-personal-and-academic-projects-are-situated-at-the-fruitful-intersection-of-data-analysis-and-writing-61e3edfe-593c-417a-9189-10f77b4cba83-UpU3hw font-class-1">
-                            Hi! I`m a student at Wesleyan University, where I study <br />Psychology and Data Science. Most of my personal and academic projects are situated at the fruitful intersection of data analysis and writing.<br /><br />
-                        </div>
-                        <img anima-src="./img/path-8-3@1x.png" class="path-8-273ec209-017d-4997-b3ab-b4844ce62db3-Mq7nxQ" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-2-91a744cb-5302-4eea-9eef-9b963b71f4a5-65zDh2">
-                            <img anima-src="./img/path-9-3@1x.png" class="path-9-7d2d9182-993e-453f-8039-bc5065df2c69-xYHJYs" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-10-3@1x.png" class="path-10-bed1cb8b-0e45-474e-a79f-672c97a00e27-MgFdym" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-11-3@1x.png" class="path-11-8216a2c0-8ac4-4fb4-86da-3d3135755381-xrhUGZ" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </div>
-                        <div class="experience-85d4a746-d9de-41a9-9d19-b17eed2c436a-o2GCls font-class-1">
-                            experience
-                        </div>
-                        <div class="technical-writer-intern-summer-2019-2020-26fd3af0-e40d-429a-954c-f27ea547bf9e-DF83Rt font-class-1">
-                            Technical Writer Intern, summer 2019 &amp; 2020
-                        </div>
-                        <a href="https://mediaproject.wesleyan.edu/" target="_blank">
-                            <div class="wesleyan-media-project-de63b807-6377-4076-87d4-3e47a77a5f1c-3BD4Kg font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Media Project
-                            </div>
-                        </a>
-                        <div class="computational-research-assistant-january-2019-present-2f288d94-8fe6-4461-b95a-ec59fdc7814a-3cHcxC font-class-1">
-                            Computational Research Assistant, January 2019 — Present
-                        </div>
-                        <a href="http://wesleyanargus.com/user/srdean/" target="_blank">
-                            <div class="wesleyan-argus-b679d891-76e9-431e-afda-0370031f5d18-moXomT font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Argus
-                            </div>
-                        </a>
-                        <div class="staff-writer-and-copy-editor-august-2018-present-4bc952fa-a436-4225-8d64-ebef59aa621e-DSqDFr font-class-1">
-                            Staff Writer and Copy Editor, August 2018 — Present
-                        </div>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <div class="towards-data-science-f52f3b47-0836-4075-9332-840489333976-vzOdck font-class-1 anima-smart-layers-pointers ">
-                                Towards Data Science
-                            </div>
-                        </a>
-                        <div class="contributing-writer-october-2018-present-6d3da08f-6f7e-4337-bad1-e2691de28ae1-CJcHy0 font-class-1">
-                            Contributing Writer, October 2018 — Present
-                        </div>
-                        <div class="rectangle-22-649299a7-1d48-4470-8856-27b3d4931030-qGxzOm">
-                        </div>
-                        <div class="projects-24d5d2da-3bc9-4962-9656-780d635b9bfe-SApGeH font-class-1">
-                            projects
-                        </div>
-                        <a href="https://twitter.com/spencer__dean" target="_blank">
-                            <div class="twitter-40e72414-2ba3-45e4-aba8-abe997039a79-DmKugB anima-smart-layers-pointers ">
-                                <img anima-src="./img/twitter-3@1x.png" class="twitter-cf65187f-37e5-4e4e-b5b7-76cd305f52b2-NjMhh2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </a>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <img anima-src="./img/medium-45-432455-3@1x.png" class="medium-45-432455-89e97e5a-f2b9-4689-8d62-54ea12673d31-slatE2 anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="mailto:sdean136@gmail.com" target="_blank">
-                            <img anima-src="./img/img-504370-3@1x.png" class="img-504370-9137e424-641a-4c7a-a1e5-57150c60d9a5-p3XEow anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://github.com/spencerrdean" target="_blank">
-                            <img anima-src="./img/img-4266-3@1x.png" class="img-4266-2aee4cd1-7e76-4179-9286-c77988a607a0-B9x8F2 anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <div class="c-2020-spencer-dean-d94fcb71-951a-4de7-a869-79f8423ee5a1-C5xTZD font-class-2">
-                            © 2020 Spencer Dean
-                        </div>
-                        <a href="https://www.linkedin.com/in/spencer-dean-786693156/" target="_blank">
-                            <img anima-src="./img/iconfinder-11-linkedin-104493-3@1x.png" class="iconfinder-11-linkedin-104493-da64ea2e-e6ad-4a5f-a668-1119041cfe56-Ax34uM anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://towardsdatascience.com/what-stories-do-schools-teach-us-43069c6dc040" target="_blank">
-                            <div class="analysis-of-english-curriculums-230bed31-c22d-4a80-a496-ad8b9dff013d-L5B5IF font-class-1 anima-smart-layers-pointers ">
-                                Analysis of English Curriculums
-                            </div>
-                        </a>
-                        <div class="article-with-accompanying-data-visualizations-analyzing-the-representation-of-female-authors-in-common-core-english-curriculums-f0cf01c7-ac89-48ee-a5e8-a15554219c10-YfItp0 font-class-1">
-                            Article with accompanying data visualizations analyzing the representation of female authors in Common Core English curriculums
-                        </div>
-                        <a href="http://deltalab.research.wesleyan.edu/2020/05/21/coronavirus-coverage-minimal-in-presidential-candidate-digital-advertising/" target="_blank">
-                            <div class="coronavirus-coverage-in-political-advertising-687d2de6-9462-47b9-b103-5e86a6f19f43-plKcRG font-class-1 anima-smart-layers-pointers ">
-                                Coronavirus Coverage in Political Advertising
-                            </div>
-                        </a>
-                        <div class="research-project-tracking-u-s-presidential-candidate-references-to-the-coronavirus-in-facebook-advertisements-ab06a914-95a8-4a94-a530-ef11deb6d79c-28yzzn font-class-1">
-                            Research project tracking U.S. presidential candidate references to the coronavirus in Facebook advertisements
-                        </div>
-                        <a href="https://towardsdatascience.com/the-isolated-den-of-fox-news-f31126e605cd" target="_blank">
-                            <div class="network-analysis-of-online-news-outlets-1531888c-f3f6-45b9-9f5d-c6618046a907-DAfM83 font-class-1 anima-smart-layers-pointers ">
-                                Network Analysis of Online News Outlets
-                            </div>
-                        </a>
-                        <div class="article-detailing-my-process-of-visualizing-and-analyzing-citations-between-news-sources-57d36130-adc0-4c34-bdfc-0a0980e549c5-5xjtL2 font-class-1">
-                            Article detailing my process of visualizing and analyzing citations between news sources
-                        </div>
-                        <div class="rectangle-23-2f0ff39d-1c63-4046-8f09-5564ba887a36-3ICma2">
-                        </div>
-                        <div class="skills-84908d15-31d2-482a-85c4-4e0ade55014f-dqxtdM font-class-1">
-                            skills
-                        </div>
-                        <div class="languages-4ce62b27-778c-4f6f-9445-324615e2dcf2-zbhheB font-class-1">
-                            Languages
-                        </div>
-                        <div class="r-python-sql-d3-js-html-css-d2009714-0f72-4fc5-9e5b-1cd78b0e4495-NLfmlO font-class-1">
-                            R, Python, SQL, D3.js, HTML, CSS
-                        </div>
-                        <div class="software-other-ad57f64a-0547-41ad-9fb9-bba3c9d582e6-9wnNCo font-class-1">
-                            Software &amp; Other
-                        </div>
-                        <div class="tableau-salesforce-adobe-xd-cytoscape-7ed83295-6be4-4055-9eb0-6c331ba7d77c-BiO3xa font-class-1">
-                            Tableau, Salesforce, Adobe XD, Cytoscape
-                        </div>
-                        <div class="group-13-ec5e0f73-c544-4cfa-ae1b-dff7d02b8996-8Xh5DG anima-flexbox-container">
-                            <div class="group-14-af025626-7430-4811-81c9-3dcf845b76b0-CkD9CI">
-                                <img anima-src="./img/path-16-3@1x.png" class="path-16-31a1dc1d-a99e-4d0a-be21-9956a716ca5f-fxoxxa" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-17-3@1x.png" class="path-17-d1e30631-63f9-431c-8ed9-e5af36e6749a-fy69L5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-18-3@1x.png" class="path-18-93f986eb-5485-4cd6-83b0-900144e89edc-NDyw6a" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </div>
-                        <a href="https://www.salesforce.com/" target="_blank">
-                            <div class="salesforce-cd510bf7-31fa-4f7c-bcb9-f2f800c0bde4-L7nTtW font-class-1 anima-smart-layers-pointers ">
-                                Salesforce
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="anima-container-center-horizontal">
-            <div class="workmobile anima-screen ">
-                <div class="rectangle-17-7b48098e-6dc6-47a6-ac63-410e962facac-4xd134 anima-hidden ">
-                </div>
-                <div class="group-12-d1a2a4d4-b399-4056-8d89-3cdb8e050f39-b1A9O1 anima-flexbox-container">
-                    <div class="overlap-group1-ol24TP">
-                        <img anima-show-on-scroll="" anima-src="./img/portfolio-cover-1-4@1x.png" class="portfolio-cover-1-d007015a-7fd7-4ed2-8d72-712744abb317-pyNdNR bp5-anima-animate-enter anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-6-4@1x.png" class="path-6-9bbc1825-ea7d-4772-b3cb-49f36078711d-mTHS7B" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-2-4@1x.png" class="polygon-2-f7e3d2dd-a390-4ab6-bb69-ae79809058d5-boNp0y" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-show-on-scroll="" anima-src="./img/polygon-3-4@1x.png" class="polygon-3-c540775f-5b68-42c5-b8a8-e16f0e6598d9-YADUm4 bp5-anima-animate-enter1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-5-2@1x.png" class="polygon-5-77684684-3b87-4d1f-a843-e36b31dd9e98-6hHOI5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-5-4@1x.png" class="path-5-71540f22-78a8-4b01-a822-9b8ed087db52-1w3nbp" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-6-2fbfb448-2ca1-42e5-9ea8-be370a568e45-juF9wo anima-smart-layers-pointers ">
-                            <div class="spencer-dean-a21dc331-1690-4035-a82b-f13f151c737c-m6nNaG font-class-1 bp5-anima-animate-enter2 anima-smart-layers-pointers ">
-                                Spencer Dean
-                            </div>
-                            <div class="data-scientist-and-journalist-based-in-the-san-francisco-bay-area-1df7f3ca-8415-42c1-aa9a-fcc37259609e-qRTWLO font-class-1 bp5-anima-animate-enter3 anima-smart-layers-pointers ">
-                                data scientist and journalist <br />based in the san francisco bay area
-                            </div>
-                        </div>
-                        <div class="group-7-1997045a-a067-49f8-9b12-e9db3ffcba50-jMMZeZ anima-smart-layers-pointers ">
-                            <img anima-show-on-scroll="" anima-src="./img/line-1-4@1x.png" class="line-1-89c9f7d1-48fe-4b4b-88ca-c222443d71ad-z4gF1y bp5-anima-animate-enter4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/img-0645-4@1x.png" class="img-0645-372e3f73-97cd-4780-89c5-f4e4e2124c0d-Xuaxqz" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-show-on-scroll="" anima-src="./img/line-5-4@1x.png" class="line-5-eadd43e7-4af9-4288-8494-a66684c61327-zK47BN bp5-anima-animate-enter5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/ellipse-9-4@1x.png" class="ellipse-9-6bda45f4-8644-4393-9d92-90475daf95a0-G7WOD8" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/line-4-4@1x.png" class="line-4-b2691981-fadd-4bf1-9795-1a931b04c385-HT04Qf" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <div class="group-4-441efa6b-668a-4981-9865-77cd85674a07-9jHonV">
-                                <div class="rectangle-14-8a896edf-7b37-4677-8e1f-5a05a50af579-2TlcRN">
-                                </div>
-                                <div class="rectangle-15-eab9d005-a884-40da-a617-d53435ab4660-32dDsf">
-                                </div>
-                                <div class="rectangle-16-ba2dcc97-5c29-4b3f-a525-44a0d568971b-z7rOsi">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group-8-ad6a6f34-a7c3-4621-b44c-9dba33a485bb-tV4wWe anima-smart-layers-pointers ">
-                            <div anima-show-on-scroll="" class="group-1-ed9cc7cd-305e-4bd8-b60a-ec5c9737ee80-1Opx1S bp5-anima-animate-enter6 anima-smart-layers-pointers ">
-                                <img anima-src="./img/line-2-4@1x.png" class="line-2-480760ec-fb48-446a-a6b9-779d74f47be8-5yRLcH" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/polygon-4-4@1x.png" class="polygon-4-41ea8d5e-1d4b-4e26-8b9f-855c2acc9607-ESoWzg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                            <div anima-show-on-scroll="" class="s-c-r-o-l-l-cdbbf1c0-600b-49ba-bee2-a9a06e418d33-NpVPye font-class-1 bp5-anima-animate-enter7 anima-smart-layers-pointers ">
-                                S<br />C<br />R<br />O<br />L<br />L<br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overlap-group-3hYcw9">
-                        <div class="rectangle-21-ab87d1c3-4203-49f2-96db-307ecf3eb067-hRGc1b">
-                        </div>
-                        <div class="auto-flex-fUpNx9 anima-flexbox-container">
-                            <div class="rectangle-20-ad7cb8d1-bd0e-48eb-92f9-c00b3db08015-YIG9xn">
-                            </div>
-                            <div class="about-me-5071c03f-bb75-4011-8c1d-7bdbf94e1dee-aOMvm7 font-class-1">
-                                about me
-                            </div>
-                        </div>
-                        <img anima-src="./img/path-7-4@1x.png" class="path-7-041eff73-21da-4b60-862a-a6bca5e754d6-4xIRYw" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="hi-i-m-a-student-at-wesleyan-university-where-i-study-psychology-and-data-science-most-of-my-personal-and-academic-projects-are-situated-at-the-fruitful-intersection-of-data-analysis-and-writing-28d7bb8e-2ee3-4ab7-a53d-515f7463143d-L5FnO1 font-class-1">
-                            Hi! I`m a student at Wesleyan University, where I study <br />Psychology and Data Science. Most of my personal and academic projects are situated at the fruitful intersection of data analysis and writing.<br /><br />
-                        </div>
-                        <img anima-src="./img/path-8-4@1x.png" class="path-8-de05089f-ac13-4b82-9fec-fdcbbe28c7fb-X5xaPS" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-2-2627cefa-4f3a-43f4-8c2d-46971c73c334-KsJtBt">
-                            <img anima-src="./img/path-9-4@1x.png" class="path-9-632ad9f2-25ec-4b59-900a-8338cd83882a-fzYBOi" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-10-4@1x.png" class="path-10-d127b784-4d84-4acb-ad83-59c965c6de2c-gnSpVt" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-11-4@1x.png" class="path-11-267139c4-722b-4721-b10f-cde955f42ccd-5FC5Ln" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </div>
-                        <div class="experience-faae9936-6a9d-49bc-a447-4a931c188a11-4kaosp font-class-1">
-                            experience
-                        </div>
-                        <a href="https://www.salesforce.com/" target="_blank">
-                            <img anima-src="./img/salesforce---@1x.png" class="salesforce-8db38102-7e47-4e9a-896d-9ef99bd68171-bPZNBx anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <div class="technical-writer-intern-summer-2019-2020-d0bea761-1b64-4b99-807e-df03dfa47d5d-liXqQm font-class-1">
-                            Technical Writer Intern, summer 2019 &amp; 2020
-                        </div>
-                        <a href="https://mediaproject.wesleyan.edu/" target="_blank">
-                            <div class="wesleyan-media-project-eb98e2bc-1d77-492e-924e-f0da79fd54e4-wNuyfq font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Media Project
-                            </div>
-                        </a>
-                        <div class="computational-research-assistant-january-2019-present-ee9ab686-45f4-4b59-a8e5-da5c53fcbd5b-jmq1wO font-class-1">
-                            Computational Research Assistant, January 2019 — Present
-                        </div>
-                        <a href="http://wesleyanargus.com/user/srdean/" target="_blank">
-                            <div class="wesleyan-argus-024b72fe-b4e7-40e2-b7f1-3f6b7deae27e-AzGgTk font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Argus
-                            </div>
-                        </a>
-                        <div class="staff-writer-and-copy-editor-august-2018-present-066c6b1d-e7a0-41bc-9f9f-2c2d4b9e761f-QJe8mN font-class-1">
-                            Staff Writer and Copy Editor, August 2018 — Present
-                        </div>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <div class="towards-data-science-c8dc534a-cb7a-4e71-abbd-c610c9be0630-lxHkgk font-class-1 anima-smart-layers-pointers ">
-                                Towards Data Science
-                            </div>
-                        </a>
-                        <div class="contributing-writer-october-2018-present-5f99bb45-0f68-4b6d-b93a-2ea821ebeb6c-vmg4b5 font-class-1">
-                            Contributing Writer, October 2018 — Present
-                        </div>
-                        <div class="rectangle-22-c06da271-a595-4c36-8721-58dd4b30ab07-ixppkT">
-                        </div>
-                        <div class="projects-0e0cd7eb-f469-4772-8fb0-d74bd5fd8cf8-p3mChW font-class-1">
-                            projects
-                        </div>
-                        <a href="https://twitter.com/spencer__dean" target="_blank">
-                            <div class="twitter-1827c702-69d0-427f-bd8f-2ed1ede43526-09pvjz anima-smart-layers-pointers ">
-                                <img anima-src="./img/twitter-4@1x.png" class="twitter-c5c257c2-0d16-4880-98ac-6c4a9832a03e-1FxNve" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </a>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <img anima-src="./img/medium-45-432455-4@1x.png" class="medium-45-432455-f2682464-e72b-4b24-9796-5ac752a04ee4-7VJ7xF anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="mailto:sdean136@gmail.com" target="_blank">
-                            <img anima-src="./img/img-504370-4@1x.png" class="img-504370-821d8f71-8238-47d4-ac2d-c1643c89c5e7-MdeAfm anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://github.com/spencerrdean" target="_blank">
-                            <img anima-src="./img/img-4266-4@1x.png" class="img-4266-55f92ebb-e760-4412-91a6-2bfbd3ff0b16-sU7wxY anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <div class="c-2020-spencer-dean-013ba0f1-a2cc-4fd6-9ff7-ec5b9a54ac19-VCG19c font-class-2">
-                            © 2020 Spencer Dean
-                        </div>
-                        <a href="https://www.linkedin.com/in/spencer-dean-786693156/" target="_blank">
-                            <img anima-src="./img/iconfinder-11-linkedin-104493-4@1x.png" class="iconfinder-11-linkedin-104493-1de337ac-e15f-4744-bfc6-8c972e8ce833-aEMDrb anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://towardsdatascience.com/what-stories-do-schools-teach-us-43069c6dc040" target="_blank">
-                            <div class="analysis-of-english-curriculums-fcb4060a-919d-43e8-8f5d-7f82f0ef2bc9-ohL8oy font-class-1 anima-smart-layers-pointers ">
-                                Analysis of English Curriculums
-                            </div>
-                        </a>
-                        <div class="article-with-accompanying-data-visualizations-analyzing-the-representation-of-female-authors-in-common-core-english-curriculums-4de3feaa-a1b7-45fa-be92-8fff87233d87-q7VwWP font-class-1">
-                            Article with accompanying data visualizations analyzing the representation of female authors in Common Core English curriculums
-                        </div>
-                        <a href="http://deltalab.research.wesleyan.edu/2020/05/21/coronavirus-coverage-minimal-in-presidential-candidate-digital-advertising/" target="_blank">
-                            <div class="coronavirus-coverage-in-political-advertising-1299186e-4a14-47f2-a500-88a519182ca4-01BnxO font-class-1 anima-smart-layers-pointers ">
-                                Coronavirus Coverage in Political Advertising
-                            </div>
-                        </a>
-                        <div class="research-project-tracking-u-s-presidential-candidate-references-to-the-coronavirus-in-facebook-advertisements-b5894f45-b862-47a1-b6bb-8aeb700e29b1-xGgceI font-class-1">
-                            Research project tracking U.S. presidential candidate references to the coronavirus in Facebook advertisements
-                        </div>
-                        <a href="https://towardsdatascience.com/the-isolated-den-of-fox-news-f31126e605cd" target="_blank">
-                            <div class="network-analysis-of-online-news-outlets-75c44cc4-a49f-43df-bce2-7f043541dc06-1Q4ZdG font-class-1 anima-smart-layers-pointers ">
-                                Network Analysis of Online News Outlets
-                            </div>
-                        </a>
-                        <div class="article-detailing-my-process-of-visualizing-and-analyzing-citations-between-news-sources-479c7d7a-ae2d-4d92-b25a-3c75acc11247-bcHR9k font-class-1">
-                            Article detailing my process of visualizing and analyzing citations between news sources
-                        </div>
-                        <div class="rectangle-23-17e838c4-f567-4f91-9ea3-f2aaf8ea5f2f-eNTx3O">
-                        </div>
-                        <div class="skills-77933eb4-0449-4b35-9272-96fa6a21b5ba-0nj9JT font-class-1">
-                            skills
-                        </div>
-                        <div class="languages-ea8da2a9-1eba-4e78-9e91-de8b64a0db5e-mffbCp font-class-1">
-                            Languages
-                        </div>
-                        <div class="r-python-sql-d3-js-html-css-54acef5c-b288-4636-8636-67d57cf861c3-MDI8Op font-class-1">
-                            R, Python, SQL, D3.js, HTML, CSS
-                        </div>
-                        <div class="software-other-8f809232-2bfb-4900-9c35-77be98cbedd7-Bpsuxk font-class-1">
-                            Software &amp; Other
-                        </div>
-                        <div class="tableau-salesforce-adobe-xd-cytoscape-4be04451-eff3-43c1-9e81-faedf2c37384-BZwglG font-class-1">
-                            Tableau, Salesforce, Adobe XD, Cytoscape
-                        </div>
-                        <div class="group-13-07fed328-00eb-4f4a-a4a2-c1e0c49a9f7a-WST2Yv anima-flexbox-container">
-                            <div class="group-14-04abf8cf-6417-4515-acbe-059e56c97691-lIkpuI">
-                                <img anima-src="./img/path-16-4@1x.png" class="path-16-0a5d21f0-7f78-4c1f-96b0-53368c00a145-nrts7q" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-17-4@1x.png" class="path-17-27961777-aef5-416c-af93-0a10b5180c14-Urnxb7" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-18-4@1x.png" class="path-18-723be9c8-b7ea-4a01-844c-fceca47ecbd8-Jx7Bwd" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="anima-container-center-horizontal">
-            <div class="workmobile1 anima-screen ">
-                <div class="rectangle-17-ef04b56a-15b2-41bb-bc56-8ff7cc70c26b-TUFtxy anima-hidden ">
-                </div>
-                <div class="group-12-bf5abf70-58de-4466-af40-6de5e0911efb-jJdJVx anima-flexbox-container">
-                    <div class="overlap-group1-vHEFjC">
-                        <img anima-show-on-scroll="" anima-src="./img/portfolio-cover-1-5@1x.png" class="portfolio-cover-1-d5e50995-1951-4c4e-9736-59c820dead88-nj9vpo bp6-anima-animate-enter anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-6-5@1x.png" class="path-6-20ccf03a-2f79-4cb9-8cf6-b9bd9de7d75b-cJukxE" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-2-5@1x.png" class="polygon-2-bc1fb20f-bd34-45cb-9684-54b95ba66b1e-rbGabP" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/polygon-5-2@1x.png" class="polygon-5-c3eabf34-a86a-4c86-816d-073e7ad2334c-q2zJ1q" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/path-5-5@1x.png" class="path-5-09fcc7fd-3b51-4adb-b0ae-cea73a423d0c-1JP7iN" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-6-9a0f20a8-5143-412c-9bad-d44d9933a02d-nZgIBm anima-smart-layers-pointers ">
-                            <div class="spencer-dean-8bd5e964-f882-448a-939c-bf081d46220d-RoNikS font-class-1 bp6-anima-animate-enter1 anima-smart-layers-pointers ">
-                                Spencer Dean
-                            </div>
-                            <div class="data-scientist-and-journalist-based-in-the-san-francisco-bay-area-de9a1900-ee37-4f47-bd81-db6b5510008c-1kI2CB font-class-1 bp6-anima-animate-enter2 anima-smart-layers-pointers ">
-                                data scientist and journalist <br />based in the san francisco bay area
-                            </div>
-                        </div>
-                        <div class="group-7-98c9cb8c-5f43-4db3-a17a-a49a8bec58ee-bo5bzz anima-smart-layers-pointers ">
-                            <img anima-show-on-scroll="" anima-src="./img/line-1-5@1x.png" class="line-1-8a9146d3-93e2-4dc3-beb0-68825aa92e3e-uBfDSQ bp6-anima-animate-enter3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/img-0645-5@1x.png" class="img-0645-3f93edf7-d77f-4bd1-9e3a-7c93c20dc3c9-spZMw1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-show-on-scroll="" anima-src="./img/line-5-5@1x.png" class="line-5-8b509696-2458-4ceb-a5c8-3954c8a58b11-eRWBKX bp6-anima-animate-enter4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/ellipse-9-5@1x.png" class="ellipse-9-b7f64b51-1ce3-476e-acfa-a3fa7b3085b1-wWgQwL" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-19@1x.png" class="path-19-66b4726c-af0e-4dc5-9759-ee3fa9b8382e-xoWPxS" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <div class="group-4-292311f0-35f2-49b6-b80d-5e8eea882eab-zy0v71">
-                                <div class="rectangle-14-5a11f08f-7815-4b47-81bc-971c5d637442-n7GN8D">
-                                </div>
-                                <div class="rectangle-15-244c3a57-0429-42fa-ad02-e6b10ffa0627-spaLJu">
-                                </div>
-                                <div class="rectangle-16-aebe1d63-4c7c-4f01-9ed6-e525bf4cbd40-FQXSuU">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group-8-41dc539c-a179-4098-b65a-5dafbbfa29e4-qo7xDQ anima-smart-layers-pointers ">
-                            <div anima-show-on-scroll="" class="group-1-30f038fe-178c-4b11-93ec-5a9d9069833b-YRR2MR bp6-anima-animate-enter5 anima-smart-layers-pointers ">
-                                <img anima-src="./img/line-2-5@1x.png" class="line-2-82ed2fae-29f6-4753-bdec-afdc065116df-HCoYdM" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/polygon-4-5@1x.png" class="polygon-4-c50da21a-abc3-4071-b84c-dc46969751e7-uTBbvT" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                            <div anima-show-on-scroll="" class="s-c-r-o-l-l-7b1d4379-2eac-4df0-b0cd-72e46e4b668e-x5h2Rz font-class-1 bp6-anima-animate-enter6 anima-smart-layers-pointers ">
-                                S<br />C<br />R<br />O<br />L<br />L<br />
-                            </div>
-                        </div>
-                        <img anima-src="./img/polygon-8@1x.png" class="polygon-8-f89224ef-c370-4247-9f24-f58cca59a6b7-i7L9F1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    </div>
-                    <div class="overlap-group-fkp6tG">
-                        <div class="rectangle-21-9c325ab7-1562-4ac9-a79f-8f7c34cc3a42-E5wLU0">
-                        </div>
-                        <div class="auto-flex-TEkMwv anima-flexbox-container">
-                            <div class="rectangle-20-807b5c5a-f2dc-4d98-a38e-02a8e3b9a36a-tpxyav">
-                            </div>
-                            <div class="about-me-0a1c93f2-60ca-4b0c-9d23-9f813134568c-iqbSey font-class-1">
-                                about me
-                            </div>
-                        </div>
-                        <img anima-src="./img/path-7-5@1x.png" class="path-7-af4e8085-fc72-402b-9aac-456d3b63dee1-BeBJ0s" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="hi-i-m-a-student-at-wesleyan-university-where-i-study-psychology-and-data-science-most-of-my-personal-and-academic-projects-are-situated-at-the-fruitful-intersection-of-data-analysis-and-writing-f460a64f-b60f-4bf7-b61f-9448b98b5c54-uBSJKV font-class-1">
-                            Hi! I`m a student at Wesleyan University, where I study <br />Psychology and Data Science. Most of my personal and academic projects are situated at the fruitful intersection of data analysis and writing.<br /><br />
-                        </div>
-                        <img anima-src="./img/path-8-5@1x.png" class="path-8-68d64f38-c123-495e-b2b1-765c126f56bc-shvZ0H" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="group-2-44f69559-4c07-4ef3-9913-238716600f27-URYvVW">
-                            <img anima-src="./img/path-9-5@1x.png" class="path-9-a931528e-b1bd-49df-9414-75e2e1e2f2e1-xcDhJt" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-10-5@1x.png" class="path-10-75502adf-13ee-48eb-a240-4b064a24971f-Y1XOCI" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/path-11-5@1x.png" class="path-11-fa95e8ef-deaa-4a9a-857c-010024a3a69c-SiluYY" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </div>
-                        <div class="experience-a2921bd7-001f-4f24-b15e-2d564ef0dfc3-g2NYJ7 font-class-1">
-                            experience
-                        </div>
-                        <a href="https://www.salesforce.com/" target="_blank">
-                            <img anima-src="./img/salesforce----1@1x.png" class="salesforce-0a2eeaac-327d-4dba-9692-4f4e6fd20c47-mTAh39 anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <div class="technical-writer-intern-summer-2019-2020-0b488e79-0aae-405d-89fe-a8641c0c7984-ZYpOxn font-class-1">
-                            Technical Writer Intern, summer 2019 &amp; 2020
-                        </div>
-                        <a href="https://mediaproject.wesleyan.edu/" target="_blank">
-                            <div class="wesleyan-media-project-d98934e0-c4bd-4e00-a571-a1855df7a13b-Jd0Dcw font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Media Project
-                            </div>
-                        </a>
-                        <div class="computational-research-assistant-january-2019-present-b5b03584-cc1c-4006-974d-1f09798fcc0d-kCGfOa font-class-1">
-                            Computational Research Assistant, January 2019 — Present
-                        </div>
-                        <a href="http://wesleyanargus.com/user/srdean/" target="_blank">
-                            <div class="wesleyan-argus-025d1d7f-2da2-430f-8ede-c3a9322e2cfd-9utpMp font-class-1 anima-smart-layers-pointers ">
-                                Wesleyan Argus
-                            </div>
-                        </a>
-                        <div class="staff-writer-and-copy-editor-august-2018-present-0cb25bce-8691-48ae-844c-84c64781b77c-UpccDO font-class-1">
-                            Staff Writer and Copy Editor, August 2018 — Present
-                        </div>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <div class="towards-data-science-ffa958c1-1e6d-46f9-aadc-e5286fef21a9-ZNTJJn font-class-1 anima-smart-layers-pointers ">
-                                Towards Data Science
-                            </div>
-                        </a>
-                        <div class="contributing-writer-october-2018-present-56e45729-55a7-4f70-a469-4e32a02ff766-Fzf2IX font-class-1">
-                            Contributing Writer, October 2018 — Present
-                        </div>
-                        <div class="rectangle-22-df0dc5c6-67f1-4881-9808-9c2df4677181-dKx1Ch">
-                        </div>
-                        <div class="projects-a36f8a0a-ef99-4de8-a304-0d01905d1c28-u9fD6z font-class-1">
-                            projects
-                        </div>
-                        <a href="https://twitter.com/spencer__dean" target="_blank">
-                            <div class="twitter-13a26fa9-3609-49c2-a201-6369349b1aa7-u0gqmU anima-smart-layers-pointers ">
-                                <img anima-src="./img/twitter-5@1x.png" class="twitter-7745fdfc-548b-4f91-8cc6-7b462e38fe4b-Zekrx9" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </a>
-                        <a href="https://medium.com/@spencerdean" target="_blank">
-                            <img anima-src="./img/medium-45-432455-5@1x.png" class="medium-45-432455-b3a52807-1965-41a4-8bf7-7db3ae11639e-SFxmKt anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="mailto:sdean136@gmail.com" target="_blank">
-                            <img anima-src="./img/img-504370-5@1x.png" class="img-504370-4cad9de7-9862-464f-a719-18a96b601ce4-ZKMZcr anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://github.com/spencerrdean" target="_blank">
-                            <img anima-src="./img/img-4266-5@1x.png" class="img-4266-0bd33569-b3a9-4002-82a0-9e0eab95e879-WdS2aQ anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <div class="c-2020-spencer-dean-2df2e644-3273-4c75-8fea-4adfdc5cfea8-n0hkeO font-class-2">
-                            © 2020 Spencer Dean
-                        </div>
-                        <a href="https://www.linkedin.com/in/spencer-dean-786693156/" target="_blank">
-                            <img anima-src="./img/iconfinder-11-linkedin-104493-5@1x.png" class="iconfinder-11-linkedin-104493-a8cfd4fb-b0d0-4602-9c2d-af17c48cdae2-flm8Yf anima-smart-layers-pointers " src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </a>
-                        <a href="https://towardsdatascience.com/what-stories-do-schools-teach-us-43069c6dc040" target="_blank">
-                            <div class="analysis-of-english-curriculums-d2d70208-edb9-46e1-ba32-1a44469087d4-19lrEv font-class-1 anima-smart-layers-pointers ">
-                                Analysis of English Curriculums
-                            </div>
-                        </a>
-                        <div class="article-with-accompanying-data-visualizations-analyzing-the-representation-of-female-authors-in-common-core-english-curriculums-a95fa7ab-2edc-455c-b8e8-1bd5b8b823c6-2f9pu5 font-class-1">
-                            Article with accompanying data visualizations analyzing the representation of female authors in Common Core English curriculums
-                        </div>
-                        <a href="http://deltalab.research.wesleyan.edu/2020/05/21/coronavirus-coverage-minimal-in-presidential-candidate-digital-advertising/" target="_blank">
-                            <div class="coronavirus-coverage-in-political-advertising-331cefa4-935f-4512-a2f2-e3dacb4f951a-HZwuvO font-class-1 anima-smart-layers-pointers ">
-                                Coronavirus Coverage in Political Advertising
-                            </div>
-                        </a>
-                        <div class="research-project-tracking-u-s-presidential-candidate-references-to-the-coronavirus-in-facebook-advertisements-e862366b-3175-4e43-b9e1-91f156feddf7-d5wM6t font-class-1">
-                            Research project tracking U.S. presidential candidate references to the coronavirus in Facebook advertisements
-                        </div>
-                        <a href="https://towardsdatascience.com/the-isolated-den-of-fox-news-f31126e605cd" target="_blank">
-                            <div class="network-analysis-of-online-news-outlets-5aca9f22-4684-44e5-9a2c-f02a426a421a-WBEIwd font-class-1 anima-smart-layers-pointers ">
-                                Network Analysis of Online News Outlets
-                            </div>
-                        </a>
-                        <div class="article-detailing-my-process-of-visualizing-and-analyzing-citations-between-news-sources-8b9b630d-db67-4ef7-9001-f14d6ead8bac-WiKcha font-class-1">
-                            Article detailing my process of visualizing and analyzing citations between news sources
-                        </div>
-                        <div class="rectangle-23-6830f85b-9584-470e-826c-77daa4b5c36f-mO8Ozy">
-                        </div>
-                        <div class="skills-3a1a951c-085e-4d20-8155-6fb9021ef137-X9sDgf font-class-1">
-                            skills
-                        </div>
-                        <div class="languages-95cba845-924e-4320-9205-118b5ad34336-I78gaW font-class-1">
-                            Languages
-                        </div>
-                        <div class="r-python-sql-d3-js-html-css-b2a37c93-a74c-46b1-85a4-5e346e7a87c6-72G7AP font-class-1">
-                            R, Python, SQL, D3.js, HTML, CSS
-                        </div>
-                        <div class="software-other-c89e44c1-5731-4a2a-a1ec-fde69f3a69b4-oZN8hf font-class-1">
-                            Software &amp; Other
-                        </div>
-                        <div class="tableau-salesforce-adobe-xd-cytoscape-40c03681-69ed-4d37-816b-8b2f4cd017b0-XsWyCZ font-class-1">
-                            Tableau, Salesforce, Adobe XD, Cytoscape
-                        </div>
-                        <div class="group-13-8f9a914b-4eac-4b90-b6eb-ba33cae347db-1fhlOu anima-flexbox-container">
-                            <div class="group-14-69e50c2f-8a47-49b0-918e-424cb40b7fee-FgKEVA">
-                                <img anima-src="./img/path-16-5@1x.png" class="path-16-db92ec38-a50c-4de6-b8ff-8f0ec6b96a63-Xr0YOq" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-17-5@1x.png" class="path-17-ddf3b41d-07da-4588-a195-fa607e9e06c2-NlsVnB" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                <img anima-src="./img/path-18-5@1x.png" class="path-18-5f118f34-5992-4ccf-a4f1-9c8e2c3c8699-vo0HkZ" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Scripts -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© <span id="copyright-year"></span> Spencer Dean</p>
+                        </div>
+    </footer>
+
         <script>
-            anima_isHidden = function(e) {
-                if (!(e instanceof HTMLElement)) return !1;
-                if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
-                return !1;
-            };
-            anima_loadAsyncSrcForTag = function(tag) {
-                var elements = document.getElementsByTagName(tag);
-                var toLoad = [];
-                for (var i = 0; i < elements.length; i++) {
-                    var e = elements[i];
-                    var src = e.getAttribute("src");
-                    var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-                    if (loaded) continue;
-                    var asyncSrc = e.getAttribute("anima-src");
-                    if (asyncSrc == undefined || asyncSrc.length == 0) continue;
-                    if (anima_isHidden(e)) continue;
-                    toLoad.push(e);
+        function createAtkinsonDitherWithDisruption() {
+    const container = document.getElementById('dither-container');
+    if (!container) {
+        console.error('dither container not found');
+        return;
+    }
+
+    const renderWidth = 200;
+    const renderHeight = 200;
+    const displayWidth = 300;
+    const displayHeight = 300;
+    const dotRadius = 0.5;
+    const dotOpacity = 0.85;
+    const dotColor = '#007acc';
+
+    container.innerHTML = '';
+    const svg = d3.select('#dither-container')
+        .append('svg')
+        .attr('width', displayWidth)
+        .attr('height', displayHeight)
+        .attr('viewBox', `0 0 ${renderWidth} ${renderHeight}`)
+        .style('border-radius', '50%')
+        .style('overflow', 'hidden');
+
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function() {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = renderWidth;
+        canvas.height = renderHeight;
+
+        // Center-crop the image to a square before drawing
+        const imgAspect = img.width / img.height;
+        const renderAspect = renderWidth / renderHeight;
+        let sx, sy, sWidth, sHeight;
+
+        if (imgAspect > 1) {
+            sHeight = img.height;
+            sWidth = img.height * renderAspect;
+            sx = (img.width - sWidth) / 2;
+            sy = 0;
+        } else {
+            sWidth = img.width;
+            sHeight = img.width / renderAspect;
+            sx = 0;
+            sy = (img.height - sHeight) / 2;
+        }
+
+        ctx.drawImage(
+            img,
+            sx, sy, sWidth, sHeight, // source crop
+            0, 0, renderWidth, renderHeight // destination
+        );
+
+        // Atkinson dither
+        const imageData = ctx.getImageData(0, 0, renderWidth, renderHeight);
+        const data = imageData.data;
+        const gray = new Float32Array(renderWidth * renderHeight);
+
+        // Convert to grayscale
+        for (let y = 0; y < renderHeight; y++) {
+            for (let x = 0; x < renderWidth; x++) {
+                const i = (y * renderWidth + x) * 4;
+                const r = data[i];
+                const g = data[i + 1];
+                const b = data[i + 2];
+                const a = data[i + 3];
+                if (a < 128) {
+                    gray[y * renderWidth + x] = 1; // treat transparent as white
+                } else {
+                    gray[y * renderWidth + x] = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
                 }
-                toLoad.sort(function(a, b) {
-                    return anima_getTop(a) - anima_getTop(b);
-                });
-                for (var i = 0; i < toLoad.length; i++) {
-                    var e = toLoad[i];
-                    var asyncSrc = e.getAttribute("anima-src");
-                    e.setAttribute("src", asyncSrc);
-                }
-            };
-            anima_pauseHiddenVideos = function(tag) {
-                var elements = document.getElementsByTagName("video");
-                for (var i = 0; i < elements.length; i++) {
-                    var e = elements[i];
-                    var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
-                    var isHidden = anima_isHidden(e);
-                    if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
-                        e.play();
-                    } else if (isPlaying && isHidden) {
-                        e.pause();
-                    }
-                }
-            };
-            anima_loadAsyncSrc = function(tag) {
-                anima_loadAsyncSrcForTag("img");
-                anima_loadAsyncSrcForTag("iframe");
-                anima_loadAsyncSrcForTag("video");
-                anima_pauseHiddenVideos();
-            };
-            var anima_getTop = function(e) {
-                var top = 0;
-                do {
-                    top += e.offsetTop || 0;
-                    e = e.offsetParent;
-                } while (e);
-                return top;
-            };
-            anima_loadAsyncSrc();
-            anima_old_onResize = window.onresize;
-            anima_new_onResize = undefined;
-            anima_updateOnResize = function() {
-                if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
-                    anima_new_onResize = function(x) {
-                        if (anima_old_onResize != undefined) anima_old_onResize(x);
-                        anima_loadAsyncSrc();
-                    };
-                    window.onresize = anima_new_onResize;
-                    setTimeout(function() {
-                        anima_updateOnResize();
-                    }, 3000);
-                }
-            };
-            anima_updateOnResize();
-            setTimeout(function() {
-                anima_loadAsyncSrc();
-            }, 200);
-        </script>
-        <script>
-            function AnimaShowOnScroll() {
-                this.toShow = [];
-                this.nextEventY = undefined;
             }
-            AnimaShowOnScroll.prototype.show = function(e) {
-                e.style.display = "";
-            };
-            AnimaShowOnScroll.prototype.hide = function(e) {
-                e.style.display = "none";
-            };
-            AnimaShowOnScroll.prototype.getTop = function(e) {
-                if (e.animaTop != undefined && e.animaTop != 0) {
-                    return e.animaTop;
+        }
+
+        // Atkinson dither algorithm
+        const threshold = 0.5;
+        const dots = [];
+        for (let y = 0; y < renderHeight; y++) {
+            for (let x = 0; x < renderWidth; x++) {
+                const idx = y * renderWidth + x;
+                const oldPixel = gray[idx];
+                const newPixel = oldPixel < threshold ? 0 : 1;
+                const error = oldPixel - newPixel;
+                gray[idx] = newPixel;
+                if (newPixel === 0) {
+                    dots.push({ x, y, home: [x, y] });
                 }
-                var top = 0;
-                var iter = e;
-                do {
-                    top += iter.offsetTop || 0;
-                    iter = iter.offsetParent;
-                } while (iter);
-                e.animaTop = top;
-                return top;
-            };
-            AnimaShowOnScroll.prototype.onScroll = function() {
-                var screenBottom = window.pageYOffset + window.innerHeight;
-                if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
-                    return;
+                // Distribute error
+                // Right, right+1, below-1, below, below+1, below+2
+                // (Atkinson kernel)
+                if (x + 1 < renderWidth) gray[idx + 1] += error * 1 / 8;
+                if (x + 2 < renderWidth) gray[idx + 2] += error * 1 / 8;
+                if (y + 1 < renderHeight) {
+                    if (x - 1 >= 0) gray[idx + renderWidth - 1] += error * 1 / 8;
+                    gray[idx + renderWidth] += error * 1 / 8;
+                    if (x + 1 < renderWidth) gray[idx + renderWidth + 1] += error * 1 / 8;
                 }
-                this.nextEventY = undefined;
-                for (var i = 0; i < this.toShow.length; i++) {
-                    var e = this.toShow[i];
-                    var top = this.getTop(e);
-                    if (top < screenBottom) {
-                        this.show(e);
-                        this.toShow.shift();
-                        i--;
+                if (y + 2 < renderHeight) {
+                    gray[idx + renderWidth * 2] += error * 1 / 8;
+                }
+            }
+        }
+
+        // Draw function for both animation and interaction
+        function drawDots(dotArray) {
+            svg.selectAll('circle')
+                .data(dotArray)
+                .join('circle')
+                .attr('cx', d => d.x)
+                .attr('cy', d => d.y)
+                .attr('r', dotRadius)
+                .style('fill', dotColor)
+                .style('opacity', dotOpacity);
+        }
+
+        // Interactive disruption
+        function enableInteractiveDisruption() {
+            let animationFrame;
+            let returning = false;
+
+            svg.on('mousemove', function() {
+                if (returning) return;
+                const [mx, my] = d3.mouse(this);
+                const effectRadius = 50; // px
+                const pushStrength = 4; // px
+                dots.forEach(d => {
+                    const dx = d.x - mx;
+                    const dy = d.y - my;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < effectRadius) {
+                        // Push away from cursor
+                        const force = (effectRadius - dist) / effectRadius;
+                        d.x += (dx / (dist || 1)) * force * pushStrength;
+                        d.y += (dy / (dist || 1)) * force * pushStrength;
+                    }
+                });
+                drawDots(dots);
+            });
+
+            svg.on('mouseleave', function() {
+                returning = true;
+                // Animate dots back to home
+                function relaxBack() {
+                    let stillMoving = false;
+                    dots.forEach(d => {
+                        const dx = d.home[0] - d.x;
+                        const dy = d.home[1] - d.y;
+                        d.x += dx * 0.18;
+                        d.y += dy * 0.18;
+                        if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) stillMoving = true;
+                    });
+                    drawDots(dots);
+                    if (stillMoving) {
+                        animationFrame = requestAnimationFrame(relaxBack);
                     } else {
-                        this.nextEventY = top;
-                        break;
+                        returning = false;
+                        dots.forEach(d => { d.x = d.home[0]; d.y = d.home[1]; });
+                        drawDots(dots);
                     }
                 }
-            };
-            AnimaShowOnScroll.prototype.resetScrolling = function() {
-                var screenBottom = window.pageYOffset + window.innerHeight;
-                for (var i = 0; i < this.toShow.length; i++) {
-                    var e = this.toShow[i];
-                    this.show(e);
-                }
-                this.toShow = [];
-                this.nextEventY == undefined;
-                var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
-                itemsToShowOnScroll = itemsToShowOnScroll.filter(function(e) {
-                    return e.getAttribute("anima-show-on-scroll") != undefined;
-                });
-                var getTop = this.getTop;
-                itemsToShowOnScroll.sort(function(a, b) {
-                    return getTop(a) - getTop(b);
-                });
-                for (var i = 0; i < itemsToShowOnScroll.length; i++) {
-                    var e = itemsToShowOnScroll[i];
-                    var top = this.getTop(e);
-                    if (top < screenBottom) {
-                        continue;
-                    }
-                    this.toShow.push(e);
-                    this.hide(e);
-                    this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
-                }
-            };
-            AnimaShowOnScroll.prototype.handleEvent = function(e) {
-                switch (e.type) {
-                    case "scroll":
-                        this.onScroll();
-                        break;
-                    case "resize":
-                        this.resetScrolling();
-                        break;
-                }
-            };
-            AnimaShowOnScroll.prototype.init = function() {
-                this.resetScrolling();
-                window.addEventListener("scroll", this);
-                window.addEventListener("resize", this);
-            };
-            setTimeout(function() {
-                var animaShowOnScroll = new AnimaShowOnScroll();
-                animaShowOnScroll.init();
-            }, 250);
+                relaxBack();
+            });
+        }
+
+        drawDots(dots);
+        enableInteractiveDisruption();
+    };
+
+    img.onerror = function() {
+        console.error('Failed to load image');
+    };
+
+    img.src = './img/profile2.png?' + new Date().getTime();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    createAtkinsonDitherWithDisruption();
+});
+        document.getElementById("copyright-year").innerText = new Date().getFullYear();
+        
+        // Initialize all categories as collapsed
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = document.querySelectorAll('.project-category');
+            categories.forEach(category => {
+                const toggleIcon = category.querySelector('.toggle-icon');
+                toggleIcon.textContent = '›';
+            });
+        });
+        
+        function toggleCategory(element) {
+            const category = element.parentElement;
+            const toggleIcon = element.querySelector('.toggle-icon');
+            
+            if (category.classList.contains('expanded')) {
+                category.classList.remove('expanded');
+                category.classList.add('collapsed');
+            } else {
+                category.classList.remove('collapsed');
+                category.classList.add('expanded');
+            }
+        }
+        
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.experience-item');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const track = document.querySelector('.experience-track');
+        
+        function updateCarousel() {
+            // Update track position
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update active states
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+            
+            // Update button states
+            document.getElementById('prev-btn').disabled = currentSlide === 0;
+            document.getElementById('next-btn').disabled = currentSlide === slides.length - 1;
+        }
+        
+        function moveCarousel(direction) {
+            const newSlide = currentSlide + direction;
+            if (newSlide >= 0 && newSlide < slides.length) {
+                currentSlide = newSlide;
+                updateCarousel();
+            }
+        }
+        
+        function goToSlide(slideIndex) {
+            if (slideIndex >= 0 && slideIndex < slides.length) {
+                currentSlide = slideIndex;
+                updateCarousel();
+            }
+        }
+        
+        // Initialize carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCarousel();
+        });
         </script>
-        <!-- End of Scripts -->
     </body>
 </html>

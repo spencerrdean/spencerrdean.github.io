@@ -1,0 +1,589 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'National Park';
+    line-height: 1.6;
+    color: #333;
+    background-color: #faf9f6;
+}
+
+/* General link styles */
+a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 2px dotted #666;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+a:hover {
+    color: #007acc;
+    border-bottom-color: #007acc;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header and Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(250, 249, 246, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 1000;
+}
+
+.nav {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: none;
+}
+
+.nav-logo:hover {
+    color: #007acc;
+    border-bottom: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #666;
+    text-decoration: none;
+    border-bottom: none;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #007acc;
+}
+
+/* Main content */
+main {
+    margin-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, #f5f4f0 0%, #faf9f6 100%);
+}
+
+.hero-content {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-visualization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dither-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.hero-subtitle {
+    font-size: 2.25rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 600px;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section:nth-child(even) {
+    background-color: #f5f4f0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* About Section */
+.about-content {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+/* Experience Section */
+.experience-carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0.5rem 2rem;
+}
+
+.experience-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+    padding: 2rem 2rem;
+}
+
+.experience-item {
+    flex: 0 0 100%;
+    padding: 2rem;
+    background: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    opacity: 0.7;
+    transform: scale(0.9);
+    margin: 1rem;
+    position: relative;
+}
+
+.experience-item.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.experience-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.experience-org {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.experience-duration {
+    font-size: 0.875rem;
+    color: #888;
+    margin-bottom: 0rem;
+}
+
+.experience-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0rem;
+    padding: 0 2rem;
+}
+
+.carousel-btn {
+    background: none;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.carousel-btn:hover {
+    border-color: #007acc;
+    color: #007acc;
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0 2rem;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.carousel-indicator.active {
+    background: #007acc;
+}
+
+/* Projects Section */
+.project-category {
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+}
+
+.project-category:last-child {
+    margin-bottom: 0;
+}
+
+.project-category-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.project-category-title:hover {
+    color: #007acc;
+}
+
+.toggle-icon {
+    float: right;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+
+.project-category.expanded .toggle-icon {
+    transform: rotate(90deg);
+}
+
+.project-category .projects-grid {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1rem;
+}
+
+.project-category.expanded .projects-grid {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    padding: 1rem;
+}
+
+.project-item {
+    padding: 2rem;
+    background: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin: 1rem;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-cover {
+    flex-shrink: 0;
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #999;
+    border: 1px solid #e0e0e0;
+}
+
+.project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.project-title a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.2s ease;
+}
+
+.project-title a:hover {
+    color: #007acc;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 900px;
+}
+
+.skills-category {
+    padding: 2rem;
+    background: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.skills-category-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.skills-list {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Contact Section */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 600px;
+}
+
+.contact-link {
+    color: #333;
+    text-decoration: none;
+    border-bottom: none;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 0;
+    background: #f5f4f0;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.footer-text {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .hero {
+        padding: 4rem 0 3rem;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .hero-visualization {
+        order: -1;
+    }
+    
+    #dither-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .experience-carousel {
+        gap: 1.5rem;
+    }
+    
+    .experience-item {
+        padding: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-links {
+        gap: 1rem;
+    }
+    
+    .contact-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+} 
